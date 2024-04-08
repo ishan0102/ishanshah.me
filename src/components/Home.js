@@ -62,7 +62,7 @@ export function Home() {
             <SectionContent>
               <div className="prose -mb-8">
                 <p>
-                  Hey, I'm Ishan! I'm a founding engineer at a stealth startup (YC W24) and like building with LLMs in my free time.
+                  Hey, I'm Ishan! I'm a founding engineer at <a href="https://www.ycombinator.com/companies/happenstance">Happenstance</a> (YC W24) and like building with LLMs in my free time.
                   I graduated from UT Austin with degrees in Computer Engineering and Mathematics and now I live in NYC.
                 </p>
                 <p className="-mb-2">
@@ -135,6 +135,32 @@ export function Home() {
               <iframe className="rounded-xl" src="https://open.spotify.com/embed/playlist/12DxIGMOK6o2ZQ5PdT8Hzv?utm_source=generator" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </SectionContent>
           </SectionContainer>
+
+          {/* :) */}
+          <pre className="leading-5 ml-12 hidden md:block">
+            {
+              `
+                   ,----------------,              ,---------,
+              ,-----------------------,          ,"        ,"|
+            ,"                      ,"|        ,"        ,"  |
+           +-----------------------+  |      ,"        ,"    |
+           |  .-----------------.  |  |     +---------+      |
+           |  |                 |  |  |     | -==----'|      |
+           |  | ishan0102:~$    |  |  |     |         |      |
+           |  |                 |  |  |/----|\`---=    |      |
+           |  |                 |  |  |   ,/|==== ooo |      ;
+           |  |                 |  |  |  // |(((( [33]|    ,"
+           |  \`-----------------'  |," .;'| |((((     |  ,"
+           +-----------------------+  ;;  | |         |,"
+              /_)______________(_/  //'   | +---------+
+         ___________________________/___  \`,
+        /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+       / ==ooooooooooooooo==.o.  ooo= //   ,\`\--{)B     ,"
+      /_==__==========__==_ooo__ooo=_/'   /___________,"
+      \`-----------------------------'
+              `
+            }
+          </pre>
         </div>
       </Detail.ContentContainer>
     </Detail.Container>
