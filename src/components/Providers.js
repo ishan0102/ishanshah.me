@@ -10,11 +10,11 @@ const defaultSEO = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.marmik.xyz',
+    url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/',
     site_name: 'Marmik',
     images: [
       {
-        url: 'https://www.ishanshah.me/static/og/default.png',
+        url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg',
         alt: 'marmik',
       },
     ],
@@ -53,7 +53,7 @@ export function Providers() {
 
         {/* OpenGraph */}
         <meta property="og:title" content="Marmik Chaudhari" key="title" />
-        <meta property="og:image" content="https://www.ishanshah.me/static/og/default.png" />
+        <meta property="og:image" content="https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg" />
       </Head>
 
       {/* Global Site Tag (gtag.js) - Google Analytics */}
