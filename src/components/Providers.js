@@ -4,24 +4,24 @@ import { DefaultSeo } from 'next-seo'
 import * as React from 'react'
 
 const defaultSEO = {
-  title: 'Ishan Shah',
+  title: 'marmik',
   description:
-    'Software engineer living in NYC.',
+    'a 19 yo college student who loves to learn ml and build',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.ishanshah.me',
-    site_name: 'Ishan Shah',
+    url: 'https://www.marmik.xyz',
+    site_name: 'Marmik',
     images: [
       {
         url: 'https://www.ishanshah.me/static/og/default.png',
-        alt: 'Ishan Shah',
+        alt: 'marmik',
       },
     ],
   },
   twitter: {
-    handle: '@ishan0102',
-    site: '@ishan0102',
+    handle: '@MarmikCh19',
+    site: '@MarmikCh19',
     cardType: 'summary_large_image',
   },
 }
@@ -31,14 +31,14 @@ export function Providers() {
     <>
       <DefaultSeo {...defaultSEO} />
       <Head>
-        <link rel="icon" href="/static/favicon.ico" sizes="any" />
+        <link rel="icon" href="/static/icon.ico" sizes="any" />
         <link
           rel="icon"
-          href="/static/favicon.png"
+          href="/static/icon.png"
           type="image/png"
           sizes="any"
         />
-        <link rel="apple-touch-icon" href="/static/meta/apple-touch-icon.png" />
+        <link rel="icon" href="/static/meta/icon.png" />
         <link rel="manifest" href="/static/meta/manifest.webmanifest" />
         <meta
           name="theme-color"
@@ -52,7 +52,7 @@ export function Providers() {
         />
 
         {/* OpenGraph */}
-        <meta property="og:title" content="Ishan Shah" key="title" />
+        <meta property="og:title" content="Marmik Chaudhari" key="title" />
         <meta property="og:image" content="https://www.ishanshah.me/static/og/default.png" />
       </Head>
 
