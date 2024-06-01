@@ -31,7 +31,9 @@ export function Books() {
 
           <ul>
 
-            <li>children of dune (currently reading) </li>
+            <li>do androids dream of electric sheep (currently reading)</li>
+
+            <li>children of dune </li>
 
             <li>surely you're joking, mr. feynman</li>
 
