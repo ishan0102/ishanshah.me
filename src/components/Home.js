@@ -69,7 +69,7 @@ export function Home() {
                 </p>
                 <ul>
                   <li>ocr using transformers neural network at a startup as a ml developer </li>
-                  <li>ink detection models on herculaneum scrolls for <a href="https://scrollprize.org/">vesuvius challenge</a></li>
+                  {/* <li>ink detection models on herculaneum scrolls for <a href="https://scrollprize.org/">vesuvius challenge</a></li> */}
                   <li>computer vision algorithms for a fully autonomous robot for <a href="https://www.robomaster.com/en-US">robomaster</a> league team @ penn state</li>
                   <li>text generation model using markov chains </li>
                 </ul>

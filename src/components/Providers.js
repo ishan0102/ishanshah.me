@@ -11,12 +11,17 @@ const defaultSEO = {
     type: 'website',
     locale: 'en_US',
     url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/',
+    url: 'http://marmik.xyz/',
     site_name: 'Marmik',
     images: [
       {
         url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg',
         alt: 'marmik',
       },
+      {
+        url: 'https://marmik.xyz/static/banner.jpeg',
+        alt: 'marmik',
+      }
     ],
   },
   twitter: {
@@ -54,6 +59,8 @@ export function Providers() {
         {/* OpenGraph */}
         <meta property="og:title" content="Marmik Chaudhari" key="title" />
         <meta property="og:image" content="https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg" />
+        <meta property="og:image" content="https://marmik.xyz/static/banner.jpeg" />
+
       </Head>
 
       {/* Global Site Tag (gtag.js) - Google Analytics */}
