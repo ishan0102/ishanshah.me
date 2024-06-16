@@ -31,7 +31,9 @@ export function Books() {
 
           <ul>
 
-            <li>do androids dream of electric sheep (currently reading)</li>
+            <li>a brief history of intelligence (currently reading)</li>
+
+            <li>do androids dream of electric sheep </li>
 
             <li>children of dune </li>
 
