@@ -31,7 +31,9 @@ export function Books() {
 
           <ul>
 
-            <li>a brief history of intelligence (currently reading)</li>
+            <li>norwegian wood (currently reading) </li>
+
+            <li>a brief history of intelligence</li>
 
             <li>do androids dream of electric sheep </li>
 
