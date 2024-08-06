@@ -31,7 +31,11 @@ export function Books() {
 
           <ul>
 
-            <li>norwegian wood (currently reading) </li>
+            <li>the trial by kafka (currently reading) </li>
+
+            <li>murder on the orient express </li>
+
+            <li>norwegian wood</li>
 
             <li>a brief history of intelligence</li>
 
