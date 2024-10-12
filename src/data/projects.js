@@ -18,7 +18,7 @@ const projectsList = [
     link: "https://www.ishan.coffee/",
   },
   {
-    name: "Engblogs",
+    name: "engblogs",
     date: "2023",
     tagline: "Summarizing tech blogs with GPT-3.5",
     link: "https://engblogs.dev",
@@ -36,7 +36,7 @@ const projectsList = [
     link: "https://github.com/ishan0102/aphelia",
   },
   {
-    name: "Countdowns",
+    name: "countdowns.live",
     date: "2023",
     tagline: "Beautiful, shareable countdown timers",
     link: "https://countdowns.live",
@@ -124,11 +124,6 @@ const projectsList = [
     date: "2021",
     tagline: "Building a Bash-like shell from scratch",
     link: "https://magicant.github.io/yash/",
-  },
-  {
-    name: "PeerNet",
-    date: "2021",
-    tagline: "Peer-to-peer tutoring for universities",
   },
   {
     name: "Longhorn Computing Services",

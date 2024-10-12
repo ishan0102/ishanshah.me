@@ -1,10 +1,8 @@
-import "../styles/custom-styles.css";
-import "../styles/dracula.css";
-import "../styles/prose-styles.css";
+import "../styles/globals.css";
 
 import * as React from "react";
-import { Nav } from "../components/Nav";
-import { Providers } from "../components/Providers";
+import { Nav } from "../components/nav";
+import { Providers } from "./providers";
 
 export default function App({ Component, pageProps }) {
   return (
