@@ -16,7 +16,7 @@
     bottom: -50%;
     left: -50%;
     z-index: -1;
-    @apply bg-off-white dark:bg-off-black;
+    @apply bg-off-white;
   }
 
   /* Inflection Font */
@@ -47,53 +47,19 @@
 /* Your own custom utilities */
 @layer utilities {
   .text-primary {
-    @apply text-gray-900 dark:text-slate-200;
+    @apply text-gray-900;
   }
 
   .text-secondary {
-    @apply text-gray-700 dark:text-gray-300;
+    @apply text-gray-700;
   }
 
   .text-tertiary {
-    @apply text-gray-500 dark:text-gray-400;
+    @apply text-gray-500;
   }
 
   .text-quaternary {
-    @apply text-gray-400 dark:text-gray-500;
-  }
-
-  .bg-elevated {
-    @apply bg-gray-400 bg-opacity-5 dark:bg-gray-50;
-  }
-
-  .filter-none {
-    filter: none;
-  }
-
-  .filter-grayscale {
-    filter: grayscale(100%);
-  }
-
-  .filter-saturate {
-    -webkit-filter: brightness(105%) saturate(200%) contrast(1);
-    filter: brightness(105%) saturate(200%) contrast(1);
-  }
-
-  .filter-blur {
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-
-  .highlight-link-hover {
-    @apply -mx-0.5 rounded-sm bg-opacity-20 px-0.5 text-gray-900 no-underline dark:bg-opacity-100 dark:text-gray-300 md:hover:bg-yellow-400 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900;
-  }
-
-  .highlight-link {
-    @apply -mx-0.5 bg-opacity-20 px-0.5 text-gray-900 dark:bg-gray-100 dark:bg-opacity-20 dark:text-gray-300 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900;
-  }
-
-  .blink {
-    animation: blink-animation 1.5s steps(2, start) infinite;
-    -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+    @apply text-gray-400;
   }
 
   .font-grenette {

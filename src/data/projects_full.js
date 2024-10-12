@@ -9,9 +9,9 @@ const projectsList = [
     `,
     tag: "Personal",
     links: {
-      "Website": "https://engblogs.dev",
-      "GitHub": "https://github.com/ishan0102/engblogs",
-    }
+      Website: "https://engblogs.dev",
+      GitHub: "https://github.com/ishan0102/engblogs",
+    },
   },
   {
     name: "Hermes Mail",
@@ -24,9 +24,9 @@ const projectsList = [
     `,
     tag: "Personal",
     links: {
-      "GitHub": "https://github.com/ishan0102/hermes-mail",
-      "PyPI": "https://pypi.org/project/hermes-mail/",
-    }
+      GitHub: "https://github.com/ishan0102/hermes-mail",
+      PyPI: "https://pypi.org/project/hermes-mail/",
+    },
   },
   {
     name: "Countdowns",
@@ -41,9 +41,9 @@ const projectsList = [
     `,
     tag: "Personal",
     links: {
-      "Website": "https://countdowns.live",
-      "GitHub": "https://github.com/ishan0102/countdowns",
-    }
+      Website: "https://countdowns.live",
+      GitHub: "https://github.com/ishan0102/countdowns",
+    },
   },
   {
     name: "Do LLMs Know Grammar?",
@@ -57,9 +57,9 @@ const projectsList = [
     `,
     tag: "Research",
     links: {
-      "Paper": "/static/pdf/llm-grammar.pdf",
-      "Poster": "/static/pdf/llm-grammar-poster.pdf",
-    }
+      Paper: "/static/pdf/llm-grammar.pdf",
+      Poster: "/static/pdf/llm-grammar-poster.pdf",
+    },
   },
   {
     name: "Re:Form",
@@ -73,9 +73,9 @@ const projectsList = [
     `,
     tag: "School",
     links: {
-      "YouTube": "https://www.youtube.com/watch?v=ir3zXi55mm4",
-      "Poster": "/static/pdf/reform.pdf",
-    }
+      YouTube: "https://www.youtube.com/watch?v=ir3zXi55mm4",
+      Poster: "/static/pdf/reform.pdf",
+    },
   },
   {
     name: "rsrch",
@@ -90,9 +90,9 @@ const projectsList = [
     `,
     tag: "Personal",
     links: {
-      "GitHub": "https://github.com/ishan0102/rsrch",
-      "PyPI": "https://pypi.org/project/rsrch/",
-    }
+      GitHub: "https://github.com/ishan0102/rsrch",
+      PyPI: "https://pypi.org/project/rsrch/",
+    },
   },
   {
     name: "Video QA",
@@ -107,8 +107,8 @@ const projectsList = [
     `,
     tag: "Work",
     links: {
-      "GitHub": "https://github.com/ishan0102/video-qa"
-    }
+      GitHub: "https://github.com/ishan0102/video-qa",
+    },
   },
   {
     name: "Audio Wiki",
@@ -123,8 +123,8 @@ const projectsList = [
     `,
     tag: "Work",
     links: {
-      "Website": "https://audio.wiki",
-    }
+      Website: "https://audio.wiki",
+    },
   },
   {
     name: "Real Analysis Textbook",
@@ -138,9 +138,9 @@ const projectsList = [
     `,
     tag: "School",
     links: {
-      "Textbook": "/static/pdf/real-analysis.pdf",
-      "GitHub": "https://github.com/ishan0102/real-analysis",
-    }
+      Textbook: "/static/pdf/real-analysis.pdf",
+      GitHub: "https://github.com/ishan0102/real-analysis",
+    },
   },
   {
     name: "Pictionary",
@@ -157,14 +157,21 @@ const projectsList = [
       `,
     tag: "School",
     links: {
-      "Paper": "/static/pdf/pictionary.pdf",
-      "GitHub": "https://github.com/ishan0102/pictionary",
+      Paper: "/static/pdf/pictionary.pdf",
+      GitHub: "https://github.com/ishan0102/pictionary",
     },
   },
   {
     name: "Commentary",
     date: "April 2022 - May 2022",
-    tools: ["Python", "NLTK", "Scikit-learn", "XGBoost", "Twitter API", "FastAPI"],
+    tools: [
+      "Python",
+      "NLTK",
+      "Scikit-learn",
+      "XGBoost",
+      "Twitter API",
+      "FastAPI",
+    ],
     tagline: "Predicting the sentiment of a tweet's replies",
     description: `
         For my final project in Data Science Principles (EE 461P), I trained a model to
@@ -175,8 +182,8 @@ const projectsList = [
       `,
     tag: "School",
     links: {
-      "GitHub": "https://github.com/ishan0102/commentary",
-      "Poster": "/static/pdf/commentary.pdf",
+      GitHub: "https://github.com/ishan0102/commentary",
+      Poster: "/static/pdf/commentary.pdf",
     },
   },
   {
@@ -192,7 +199,7 @@ const projectsList = [
       `,
     tag: "Research",
     links: {
-      "Paper": "/static/pdf/gpt3.pdf",
+      Paper: "/static/pdf/gpt3.pdf",
     },
   },
   {
@@ -208,7 +215,8 @@ const projectsList = [
       `,
     tag: "School",
     links: {
-      "Website": "https://web.stanford.edu/class/cs140/projects/pintos/pintos_1.html",
+      Website:
+        "https://web.stanford.edu/class/cs140/projects/pintos/pintos_1.html",
     },
   },
   {
@@ -223,8 +231,7 @@ const projectsList = [
         deeply understanding low-level computing.
       `,
     tag: "School",
-    links: {
-    },
+    links: {},
   },
   {
     name: "PeerNet",
@@ -238,8 +245,7 @@ const projectsList = [
         with Firebase.
       `,
     tag: "Work",
-    links: {
-    },
+    links: {},
   },
   {
     name: "Longhorn Computing Services",
@@ -253,7 +259,7 @@ const projectsList = [
       `,
     tag: "School",
     links: {
-      "GitHub": "https://github.com/JimothyGreene/EE461L-Group2-FinalProject",
+      GitHub: "https://github.com/JimothyGreene/EE461L-Group2-FinalProject",
     },
   },
   {
@@ -268,7 +274,7 @@ const projectsList = [
       `,
     tag: "Personal",
     links: {
-      "GitHub": "https://github.com/DayInReview/day-in-review",
+      GitHub: "https://github.com/DayInReview/day-in-review",
     },
   },
   {
@@ -283,8 +289,7 @@ const projectsList = [
         a full-stack app with a database from scratch.
       `,
     tag: "School",
-    links: {
-    },
+    links: {},
   },
   {
     name: "Speech Analysis with NLP",
@@ -298,8 +303,8 @@ const projectsList = [
       `,
     tag: "Personal",
     links: {
-      "DevPost": "https://devpost.com/software/nlp-speech-analysis",
-      "GitHub": "https://github.com/ishan0102/hacktx-20",
+      DevPost: "https://devpost.com/software/nlp-speech-analysis",
+      GitHub: "https://github.com/ishan0102/hacktx-20",
     },
   },
   {
@@ -315,7 +320,7 @@ const projectsList = [
       `,
     tag: "Personal",
     links: {
-      "GitHub": "https://github.com/ishan0102/runkeeper",
+      GitHub: "https://github.com/ishan0102/runkeeper",
     },
   },
   {
@@ -330,12 +335,12 @@ const projectsList = [
       `,
     tag: "School",
     links: {
-      "YouTube": "https://www.youtube.com/watch?v=mLqsLVLjyEE",
-      "GitHub": "https://github.com/ishan0102/t-rex-run",
+      YouTube: "https://www.youtube.com/watch?v=mLqsLVLjyEE",
+      GitHub: "https://github.com/ishan0102/t-rex-run",
     },
   },
-]
+];
 
 export const ProjectData = {
   projectsList,
-}
+};

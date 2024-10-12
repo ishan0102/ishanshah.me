@@ -1,30 +1,29 @@
-import Head from 'next/head'
-import Script from 'next/script'
-import { DefaultSeo } from 'next-seo'
-import * as React from 'react'
+import { DefaultSeo } from "next-seo";
+import Head from "next/head";
+import Script from "next/script";
+import * as React from "react";
 
 const defaultSEO = {
-  title: 'Ishan Shah',
-  description:
-    'Software engineer living in NYC.',
+  title: "Ishan Shah",
+  description: "Software engineer living in NYC.",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://www.ishanshah.me',
-    site_name: 'Ishan Shah',
+    type: "website",
+    locale: "en_US",
+    url: "https://www.ishanshah.me",
+    site_name: "Ishan Shah",
     images: [
       {
-        url: 'https://www.ishanshah.me/static/og/default.png',
-        alt: 'Ishan Shah',
+        url: "https://www.ishanshah.me/static/og/default.png",
+        alt: "Ishan Shah",
       },
     ],
   },
   twitter: {
-    handle: '@ishan0102',
-    site: '@ishan0102',
-    cardType: 'summary_large_image',
+    handle: "@ishan0102",
+    site: "@ishan0102",
+    cardType: "summary_large_image",
   },
-}
+};
 
 export function Providers() {
   return (
@@ -40,25 +39,18 @@ export function Providers() {
         />
         <link rel="apple-touch-icon" href="/static/meta/apple-touch-icon.png" />
         <link rel="manifest" href="/static/meta/manifest.webmanifest" />
-        <meta
-          name="theme-color"
-          content="#fff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="rgb(23, 23, 23)"
-          media="(prefers-color-scheme: dark)"
-        />
 
         {/* OpenGraph */}
         <meta property="og:title" content="Ishan Shah" key="title" />
-        <meta property="og:image" content="https://www.ishanshah.me/static/og/default.png" />
+        <meta
+          property="og:image"
+          content="https://www.ishanshah.me/static/og/default.png"
+        />
       </Head>
 
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script 
-        strategy="afterInteractive" 
+      <Script
+        strategy="afterInteractive"
         src={"https://www.googletagmanager.com/gtag/js?id=G-CEQVMRYG8Q"}
       />
       <Script
@@ -75,19 +67,6 @@ export function Providers() {
           `,
         }}
       />
-
-      {/* Dark Mode Toggler */}
-      <Script id="darkmode-toggler">
-        {`
-          if (localStorage.theme === 'light' || (!('theme' in localStorage))) {
-            localStorage.theme = 'light'
-            document.documentElement.classList.remove('dark')
-          } else if (localStorage.theme === 'dark') {
-            localStorage.theme = 'dark'
-            document.documentElement.classList.add('dark')
-          }
-        `}
-      </Script>
     </>
-  )
+  );
 }
