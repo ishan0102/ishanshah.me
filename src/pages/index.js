@@ -1,8 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Detail } from "../components/detail";
 
 function SectionTitle(props) {
   return (
@@ -20,7 +18,7 @@ function SectionContent(props) {
 function TableRow({ href, title, subtitle, date }) {
   return (
     <a href={href} className="group flex items-center space-x-4">
-      <strong className="flex-none font-medium text-gray-900 group-hover:text-indigo-600">
+      <strong className="text-primary flex-none font-medium group-hover:text-indigo-600">
         {title}
       </strong>
       <span className="w-full shrink border-t border-dashed border-gray-300" />
@@ -47,15 +45,15 @@ function SectionContainer(props) {
   );
 }
 
-export default function home() {
+export default function Home() {
   return (
     <>
       <Head>
         <title>Ishan Shah</title>
         <meta property="og:title" content="Ishan Shah" key="title" />
       </Head>
-      <Detail.Container>
-        <Detail.ContentContainer>
+      <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll">
+        <div className="mx-auto w-full max-w-3xl px-4 pb-32 md:px-8 md:pt-2">
           {/* Avatar */}
           <div className="mb-6 flex justify-center md:ml-20">
             <Image
@@ -72,83 +70,60 @@ export default function home() {
             <SectionContainer>
               <SectionTitle />
               <SectionContent>
-                <div className="-mb-6 leading-7 text-gray-700">
+                <div className="text-secondary -mb-6 leading-7">
                   <p className="mb-5">
                     Hey, I'm Ishan! I'm a founding engineer at{" "}
                     <Link
-                      href="https://www.ycombinator.com/companies/happenstance"
-                      className="inline-flex items-center font-medium text-indigo-500"
+                      href="https://happenstance.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center font-medium text-indigo-500"
                     >
                       Happenstance
-                      <ArrowUpRight className="ml-0.5 h-4 w-4" />
                     </Link>{" "}
-                    (YC W24) and like building with LLMs in my free time. I
-                    graduated from UT Austin with degrees in Computer
-                    Engineering and Mathematics and now I live in NYC.
+                    and enjoy building things with LLMs in my free time. I
+                    graduated from UT Austin with degrees in Electrical and
+                    Computer Engineering and Mathematics.
                   </p>
-                  <p className="mb-3">In the past, I've worked on:</p>
-                  <ul className="list-inside list-disc space-y-2 pl-3">
-                    <li>
-                      Distributed systems for earnings reports at{" "}
-                      <Link
-                        href="https://www.bloomberg.com/company/"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        Bloomberg
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                    <li>
-                      Interpretability research with{" "}
-                      <Link
-                        href="https://mahowak.github.io"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        Kyle Mahowald
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                    <li>
-                      LLMs for web browsing at{" "}
-                      <Link
-                        href="https://minion.ai"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        Minion AI
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                    <li>
-                      Text-to-speech model evaluation at{" "}
-                      <Link
-                        href="https://unrealspeech.com/"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        Unreal Speech
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                    <li>
-                      Configurable throttling for video classifications at{" "}
-                      <Link
-                        href="https://www.youtube.com/jobs/trust-and-safety/"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        YouTube
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                    <li>
-                      Fraud detection using customer reviews at{" "}
-                      <Link
-                        href="https://www.capitalone.com/tech/machine-learning/"
-                        className="inline-flex items-center font-medium text-indigo-500"
-                      >
-                        Capital One
-                        <ArrowUpRight className="ml-0.5 h-4 w-4" />
-                      </Link>
-                    </li>
-                  </ul>
+                </div>
+              </SectionContent>
+            </SectionContainer>
+
+            {/* Work */}
+            <SectionContainer>
+              <SectionTitle>Work</SectionTitle>
+              <SectionContent>
+                <div className="flex flex-col space-y-3">
+                  <TableRow
+                    href="https://happenstance.ai"
+                    title="Happenstance"
+                    subtitle="AI-powered people search"
+                  />
+                  <TableRow
+                    href="https://www.bloomberg.com/company/"
+                    title="Bloomberg"
+                    subtitle="Distributed systems for earnings"
+                  />
+                  <TableRow
+                    href="https://minion.ai"
+                    title="Minion AI"
+                    subtitle="AI agents for web browsing"
+                  />
+                  <TableRow
+                    href="https://unrealspeech.com/"
+                    title="Unreal Speech"
+                    subtitle="Text-to-speech model evaluation"
+                  />
+                  <TableRow
+                    href="https://www.youtube.com/jobs/trust-and-safety/"
+                    title="YouTube"
+                    subtitle="Video classification and reliability"
+                  />
+                  <TableRow
+                    href="https://www.capitalone.com/tech/machine-learning/"
+                    title="Capital One"
+                    subtitle="Fraud detection for car dealerships"
+                  />
                 </div>
               </SectionContent>
             </SectionContainer>
@@ -205,9 +180,8 @@ export default function home() {
            |  .-----------------.  |  |     +---------+      |
            |  |                 |  |  |     | -==----'|      |
            |  | ishan0102:~$    |  |  |     |         |      |
-           |  |                 |  |  |/----|\`---=    |      |
+           |  |                 |  |  |/----|\`---=    |      ;
            |  |                 |  |  |   ,/|==== ooo |      ;
-           |  |                 |  |  |  // |(((( [33]|    ,"
            |  \`-----------------'  |," .;'| |((((     |  ,"
            +-----------------------+  ;;  | |         |,"
               /_)______________(_/  //'   | +---------+
@@ -219,8 +193,8 @@ export default function home() {
               `}
             </pre>
           </div>
-        </Detail.ContentContainer>
-      </Detail.Container>
+        </div>
+      </div>
     </>
   );
 }

@@ -62,6 +62,10 @@
     @apply text-gray-400;
   }
 
+  .text-quinary {
+    @apply text-gray-300;
+  }
+
   .font-grenette {
     font-family: 'grenette_regular', 'dazzed_medium', sans-serif;
   }
