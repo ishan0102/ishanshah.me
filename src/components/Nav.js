@@ -32,9 +32,9 @@ export function Nav() {
               books
             </a>
           </Link>
-          <Link href="/interests">
+          <Link href="/blogs">
             <a className="inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500">
-              interests
+              blogs
             </a>
           </Link>
           {/* <Link href="/interests">
