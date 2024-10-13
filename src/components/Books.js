@@ -16,12 +16,10 @@ export function Books() {
       <div className="mx-auto w-full max-w-2xl mt-4 sm:mt-8 mb-52 md:mb-32">
         <div className="prose mb-2 sm:mb-6" >
 
-        <p style={{fontSize:'16px'}}> "a shelf of books is a shelf of many lives and ideas and imaginations.
-        the true lover of books enjoys all kinds of books, even some nonsense now and then, because enjoying nonsense from others can teach us to also laugh at ourselves. 
-        a person who does not learn to laugh at his own problems and weaknesses and foolishness can never be a truly educated or a truly happy person. also, probably the same thing could be said of a person who does not enjoy learning and growing all his life."</p>
+        <p style={{fontSize:'16px'}}> </p>
 
          
-          i love reading almost all types of stuff but my fav genre is sci-fi and biographies.
+          i love reading almost all types of stuff but my fav genre is sci-fi, history and biographies.
           list of books that i've read in the past :
 
           <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}></p>
@@ -30,8 +28,9 @@ export function Books() {
           <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}>2024</p>
 
           <ul>
+            <li>down and out in the magic kingdom (currently reading)</li>
 
-            <li>the trial by kafka (currently reading) </li>
+            <li>the trial by kafka </li>
 
             <li>murder on the orient express </li>
 

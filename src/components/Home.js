@@ -61,17 +61,17 @@ export function Home() {
             <SectionContent>
               <div className="prose -mb-8">
                 <p>
-                  hey, i'm marmik. i'm a 19 yo cs major at penn state university. i spend most of my doing machine learning, tweaking neural nets and exploring math.
-                  i also love building cool things with ml for fun. apart from this i've also been painting and sketching since a long time and still enjoy doing it in free time.
+                  hey, i'm marmik. i'm a 19 yo cs + math major at penn state university. i spend most of my time understanding deep learning, working on neural nets, building cool things with them for fun and exploring math.
+                  apart from this i love watching movies and have also been painting since a long time and still enjoy doing it in free time.
                 </p>
                 <p className="-mb-2">
                   things i've worked on in the past or am currently working on :
                 </p>
                 <ul>
+                  <li>research on interpreting Mixture of Experts (MoEs) using sparse autoencoders, weight decomposition & activation patching.</li>
+                  <li>created a very fast and efficient model for image2latex for math equations using CNNs and transformers with my friends during summer</li>
                   <li>ocr using transformers neural network at a startup as a ml developer </li>
-                  {/* <li>ink detection models on herculaneum scrolls for <a href="https://scrollprize.org/">vesuvius challenge</a></li> */}
                   <li>computer vision algorithms for a fully autonomous robot for <a href="https://www.robomaster.com/en-US">robomaster</a> league team @ penn state</li>
-                  <li>text generation model using markov chains </li>
                 </ul>
               </div>
             </SectionContent>
