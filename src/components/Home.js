@@ -68,7 +68,7 @@ export function Home() {
                   things i've worked on in the past or am currently working on :
                 </p>
                 <ul>
-                  <li>research on interpreting Mixture of Experts (MoEs) using sparse autoencoders, weight decomposition & activation patching.</li>
+                  <li>research on interpreting Mixture of Experts (MoEs) and steering experts towards domain specialization.</li>
                   <li>created a very fast and efficient model for image2latex for math equations using CNNs and transformers with my friends during summer</li>
                   <li>ocr using transformers neural network at a startup as a ml developer </li>
                   <li>computer vision algorithms for a fully autonomous robot for <a href="https://www.robomaster.com/en-US">robomaster</a> league team @ penn state</li>

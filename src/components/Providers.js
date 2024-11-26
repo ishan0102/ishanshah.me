@@ -6,12 +6,12 @@ import * as React from 'react'
 const defaultSEO = {
   title: 'marmik',
   description:
-    'a 19 yo college student who loves to learn ml and build',
+    'a 19 yo college student doing neural nets research',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/',
-    url: 'http://marmik.xyz/',
+    // url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/',
+    url: 'https://marmik.xyz/',
     site_name: 'Marmik',
     images: [
       {
@@ -25,8 +25,8 @@ const defaultSEO = {
     ],
   },
   twitter: {
-    handle: '@MarmikCh19',
-    site: '@MarmikCh19',
+    handle: '@marmikch',
+    site: '@marmikch',
     cardType: 'summary_large_image',
   },
 }
