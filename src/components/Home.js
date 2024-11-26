@@ -83,7 +83,7 @@ export function Home() {
             <SectionContent>
               <div className="flex flex-col space-y-3">
                 <TableRow
-                  href={'mailto:marmik.hc.1904@gmail.com'}
+                  href={'mailto:mbc6219@psu.edu'}
                   title={'Email'}
                   subtitle={'mail'}
                   date={''}
@@ -95,7 +95,7 @@ export function Home() {
                   date={''}
                 />
                 <TableRow
-                  href={'https://x.com/MarmikCh19'}
+                  href={'https://x.com/marmikch'}
                   title={'Twitter'}
                   subtitle={'follow'}
                   date={''}
