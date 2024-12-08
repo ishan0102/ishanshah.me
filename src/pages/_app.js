@@ -6,6 +6,7 @@ import * as React from 'react'
 import { Nav } from '../components/Nav'
 import { Providers } from '../components/Providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
       <Providers />
       <Component {...pageProps} />
       <SpeedInsights />
+      <Analytics />
     </>
   )
 }
