@@ -7,7 +7,7 @@ export default function BlogsPage() {
       <Blogs />
       <Head>
         <title>my blogs</title>
-        <meta property="og:title" content="my blogs" key="title" />
+        <meta property='og:title' content='my blogs' key='title' />
       </Head>
     </>
   )

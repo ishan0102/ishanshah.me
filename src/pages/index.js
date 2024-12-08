@@ -6,8 +6,8 @@ export default function home() {
     <>
       <Home/>
       <Head>
-        <title>marmik's digital space</title>
-        <meta property="og:title" content="marmik chaudhari" key="title" />
+        <title>marmik&apos;s digital space</title>
+        <meta property='og:title' content='marmik chaudhari' key='title' />
       </Head>
     </>
   )

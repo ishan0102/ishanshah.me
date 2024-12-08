@@ -7,7 +7,7 @@ export default function books() {
       <Books/>
       <Head>
         <title>books • marmik</title>
-        <meta property="og:title" content="books • marmik" key="title" />
+        <meta property='og:title' content='books • marmik' key='title' />
       </Head>
     </>
   )

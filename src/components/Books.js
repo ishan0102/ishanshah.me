@@ -2,9 +2,9 @@
 
 // function Project({ name, date, tagline, link}) {
 //   return (
-//     <a href={link} className="flex justify-between text-secondary py-1 group">
-//       <strong className="flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500">{name}</strong>
-//       <p className="ml-auto hidden sm:inline mr-8">{tagline}</p>
+//     <a href={link} className='flex justify-between text-secondary py-1 group'>
+//       <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500'>{name}</strong>
+//       <p className='ml-auto hidden sm:inline mr-8'>{tagline}</p>
 //       <p>{date}</p>
 //     </a>
 //   )
@@ -12,15 +12,15 @@
 
 export function Books() {
   return (
-    <div className="relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8">
-      <div className="mx-auto w-full max-w-2xl mt-4 sm:mt-8 mb-52 md:mb-32">
-        <div className="prose mb-2 sm:mb-6" >
+    <div className='relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8'>
+      <div className='mx-auto w-full max-w-2xl mt-4 sm:mt-8 mb-52 md:mb-32'>
+        <div className='prose mb-2 sm:mb-6' >
 
         <p style={{fontSize:'16px'}}> </p>
 
          
           i love reading almost all types of stuff but my fav genre is sci-fi, history and biographies.
-          list of books that i've read in the past :
+          list of books that i&apos;ve read in the past :
 
           <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}></p>
 
@@ -42,7 +42,7 @@ export function Books() {
 
             <li>children of dune </li>
 
-            <li>surely you're joking, mr. feynman</li>
+            <li>surely you&apos;re joking, mr. feynman</li>
 
             <li>looking for alaska</li>
 
@@ -84,7 +84,7 @@ export function Books() {
 
             <li>steve jobs (all time fav.)</li>
 
-            <li>man's search for meaning</li>
+            <li>man&apos;s search for meaning</li>
 
             <li>21 lessons for the 21st century</li>
 

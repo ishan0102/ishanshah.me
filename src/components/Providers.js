@@ -36,41 +36,41 @@ export function Providers() {
     <>
       <DefaultSeo {...defaultSEO} />
       <Head>
-        <link rel="icon" href="/static/icon.ico" sizes="any" />
+        <link rel='icon' href='/static/icon.ico' sizes='any' />
         <link
-          rel="icon"
-          href="/static/icon.png"
-          type="image/png"
-          sizes="any"
+          rel='icon'
+          href='/static/icon.png'
+          type='image/png'
+          sizes='any'
         />
-        <link rel="icon" href="/static/meta/icon.png" />
-        <link rel="manifest" href="/static/meta/manifest.webmanifest" />
+        <link rel='icon' href='/static/meta/icon.png' />
+        <link rel='manifest' href='/static/meta/manifest.webmanifest' />
         <meta
-          name="theme-color"
-          content="#fff"
-          media="(prefers-color-scheme: light)"
+          name='theme-color'
+          content='#fff'
+          media='(prefers-color-scheme: light)'
         />
         <meta
-          name="theme-color"
-          content="rgb(23, 23, 23)"
-          media="(prefers-color-scheme: dark)"
+          name='theme-color'
+          content='rgb(23, 23, 23)'
+          media='(prefers-color-scheme: dark)'
         />
 
         {/* OpenGraph */}
-        <meta property="og:title" content="Marmik Chaudhari" key="title" />
-        <meta property="og:image" content="https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg" />
-        <meta property="og:image" content="https://marmik.xyz/static/banner.jpeg" />
+        <meta property='og:title' content='Marmik Chaudhari' key='title' />
+        <meta property='og:image' content='https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg' />
+        <meta property='og:image' content='https://marmik.xyz/static/banner.jpeg' />
 
       </Head>
 
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script 
-        strategy="afterInteractive" 
-        src={"https://www.googletagmanager.com/gtag/js?id=G-CEQVMRYG8Q"}
+        strategy='afterInteractive' 
+        src={'https://www.googletagmanager.com/gtag/js?id=G-CEQVMRYG8Q'}
       />
       <Script
-        id="gtag-init"
-        strategy="afterInteractive"
+        id='gtag-init'
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -84,7 +84,7 @@ export function Providers() {
       />
 
       {/* Dark Mode Toggler */}
-      <Script id="darkmode-toggler">
+      <Script id='darkmode-toggler'>
         {`
           if (localStorage.theme === 'light' || (!('theme' in localStorage))) {
             localStorage.theme = 'light'
