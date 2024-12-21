@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Blogs() {
   return (
     <div className='relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8'>
@@ -9,14 +11,14 @@ export function Blogs() {
           </p>
           <ul className='space-y-2'>
             <li>
-              <a
+              <Link
                 href='https://marmiks.notion.site/mathematical-intuition-for-transformers-11e6feef359d80fb85bbf1996a2b5f10?pvs=4'
                 className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 mathematical intuition for transformers
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

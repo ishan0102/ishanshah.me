@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Detail } from './Detail'
+import Link from 'next/link'
 
 function SectionTitle(props) {
   return (
@@ -71,7 +72,7 @@ export function Home() {
                   <li>research on interpreting Mixture of Experts (MoEs) and steering experts towards domain specialization.</li>
                   <li>created a very fast and efficient model for image2latex for math equations using CNNs and transformers with my friends during summer</li>
                   <li>ocr using transformers neural network at a startup as a ml developer </li>
-                  <li>computer vision algorithms for a fully autonomous robot for <a href='https://www.robomaster.com/en-US'>robomaster</a> league team @ penn state</li>
+                  <li>computer vision algorithms for a fully autonomous robot for <Link href='https://www.robomaster.com/en-US' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200'>robomaster</Link> league team @ penn state</li>
                 </ul>
               </div>
             </SectionContent>

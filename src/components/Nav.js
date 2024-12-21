@@ -14,10 +14,8 @@ export function Nav() {
   return (
     <nav className='flex items-center justify-between p-4 md:p-6 border-b border-gray-200 dark:border-none'>
       <div className='flex items-center flex-shrink-0 ml-0 md:ml-4 mr-6'>
-        <Link href='/'>
-          <a className='inline-block text-primary text-xl md:text-2xl font-semibold hover:text-indigo-500 font-grenette'>
-            Marmik Chaudhari
-          </a>
+        <Link href='/' className='inline-block text-primary text-xl md:text-2xl font-semibold hover:text-indigo-500 font-grenette'>
+          Marmik Chaudhari
         </Link>
         <button className='items-center bg-off-white ml-2 rounded dark:bg-off-black focus:outline-none' onClick={toggleTheme}>
           <svg width='22' height='22' strokeWidth='0.25' className='inline-block stroke-current fill-current text-off-black dark:text-off-white hover:text-indigo-500 dark:hover:text-indigo-500' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'>
@@ -27,25 +25,17 @@ export function Nav() {
       </div>
       <div className='flex items-center w-auto'>
         <div className='text-sm md:text-base font-normal md:font-medium md:flex-grow'>
-          <Link href='/books'>
-            <a className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500'>
-              books
-            </a>
+          <Link href='/books' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500'>
+            books
           </Link>
-          <Link href='/blogs'>
-            <a className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500'>
-              blogs
-            </a>
+          <Link href='/blogs' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500'>
+            blogs
           </Link>
-          {/* <Link href='/interests'>
-            <a target='_blank' rel='noopener noreferrer' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500'>
-              interests
-            </a>
+          {/* <Link href='/interests' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500' target='_blank' rel='noopener noreferrer'>
+            interests
           </Link> */}
-          <Link href='/static/pdf/resume.pdf'>
-            <a target='_blank' rel='noopener noreferrer' className='inline-block mr-3 text-primary hover:text-indigo-500'>
-              resume
-            </a>
+          <Link href='/static/pdf/resume.pdf' className='inline-block mr-3 text-primary hover:text-indigo-500' target='_blank' rel='noopener noreferrer'>
+            resume
           </Link>
         </div>
       </div>
