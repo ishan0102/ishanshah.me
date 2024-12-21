@@ -5,7 +5,7 @@ import Link from 'next/link'
 function SectionTitle(props) {
   return (
     <h4
-      className='col-span-2 text-lg font-semibold text-primary md:text-right md:text-base md:font-normal md:text-opacity-40'
+      className='col-span-2 text-lg font-semibold text-primary md:text-right md:text-base md:font-normal md:text-opacity-40 font-palatino'
       {...props}
     />
   )
@@ -21,12 +21,12 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className='flex items-center space-x-4 group'
     >
-      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500'>
+      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500 font-palatino'>
         {title}
       </strong>
       <span className='w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800' />
-      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base'>{subtitle}</span>}
-      {date && <span className='flex-none font-mono text-quaternary hidden md:flex'>{date}</span>}
+      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base font-palatino'>{subtitle}</span>}
+      {date && <span className='flex-none font-mono text-quaternary hidden md:flex font-palatino'>{date}</span>}
     </a>
   )
 }
@@ -44,10 +44,11 @@ export function Home() {
   return (
     <Detail.Container>
       <Detail.ContentContainer>
+
         {/* Avatar */}
         <div className='justify-center flex mb-6 md:ml-20 dark:hidden'>
           <Image
-            src='/static/img/home.JPG' /* add a image here */ 
+            src='/static/img/home.JPG'
             alt='marmik'
             width={200}
             height={200}

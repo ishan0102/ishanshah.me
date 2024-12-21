@@ -42,6 +42,29 @@
     color: #f5f5f5;
     filter: invert(1);
   }
+
+  @font-face {
+    font-family: 'Palatino';
+    src: url('../../public/static/fonts/palatinolinotype_roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* This helps with font loading performance */
+  }
+
+  /* Apply the font to the entire website */
+  html, 
+  body {
+    font-family: 'YourFontName', system-ui, -apple-system, BlinkMacSystemFont, 
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+      'Helvetica Neue', sans-serif;
+  }
+
+  /* Apply the font to Tailwind's prose class */
+  .prose {
+    font-family: 'Palatino', system-ui, -apple-system, BlinkMacSystemFont, 
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+      'Helvetica Neue', sans-serif;
+  }
 }
 
 /* Your own custom utilities */
@@ -114,4 +137,33 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+  .font-palatino {
+    font-family: 'Palatino', serif;
+  }
+}
+
+@font-face {
+  font-family: 'TitleFont';
+  src: url('../../public/static/fonts/palatinolinotype_roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.site-title {
+  font-family: 'TitleFont', system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+
+/* Add this new class for the title */
+.title-font {
+  font-family: 'Palatino', system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', serif;
+}
+
+.nav-link {
+  font-family: 'Palatino', serif;
 }

@@ -12,10 +12,8 @@ export function Blogs() {
           <ul className='space-y-2'>
             <li>
               <Link
-                href='https://marmiks.notion.site/mathematical-intuition-for-transformers-11e6feef359d80fb85bbf1996a2b5f10?pvs=4'
+                href='/blogs/transformers'
                 className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200'
-                target='_blank'
-                rel='noopener noreferrer'
               >
                 mathematical intuition for transformers
               </Link>

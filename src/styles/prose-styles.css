@@ -7,11 +7,14 @@
 }
 
 .prose figure {
-  @apply md:-mx-6;
+  @apply md:-mx-6 text-center;
+  margin: 1.5em auto;
 }
 
 .prose img {
-  @apply w-full rounded-md;
+  @apply w-full rounded-md mx-auto;
+  max-width: 600px;
+  display: block;
 }
 
 .prose a {
@@ -173,4 +176,24 @@
   top: 0px;
   position: relative;
   scroll-margin-top: 4rem;
+}
+
+/* Add these styles for the blog title and header spacing */
+.prose h1.page-title {
+  @apply mt-8 mb-8; /* Adjust these values as needed */
+  font-size: 2.5rem;
+}
+
+.prose .page-header-icon {
+  display: none; /* This removes the space where emoji was */
+}
+
+/* Adjust spacing for the first paragraph after title */
+.prose .page-body > p:first-child {
+  @apply mt-4; /* Adjust this value as needed */
+}
+
+/* Adjust general heading spacing */
+.prose h3 {
+  @apply mt-8 mb-4; /* Adjust these values as needed */
 }
