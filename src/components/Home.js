@@ -53,6 +53,7 @@ export function Home() {
             width={200}
             height={200}
             quality={100}
+            className='rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl filter-image'
           />
         </div>
 
