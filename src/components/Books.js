@@ -1,15 +1,3 @@
-// import { ProjectData } from '../data/projects'
-
-// function Project({ name, date, tagline, link}) {
-//   return (
-//     <a href={link} className='flex justify-between text-secondary py-1 group'>
-//       <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500'>{name}</strong>
-//       <p className='ml-auto hidden sm:inline mr-8'>{tagline}</p>
-//       <p>{date}</p>
-//     </a>
-//   )
-// }
-
 export function Books() {
   return (
     <div className='relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8'>
@@ -18,17 +6,24 @@ export function Books() {
 
         <p style={{fontSize:'16px'}}> </p>
 
-         
-          i love reading almost all types of stuff but my fav genre is sci-fi, history and biographies.
+          i love reading almost all types of books but my fav genre is sci-fi, history and biographies.
           list of books that i&apos;ve read in the past :
 
           <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}></p>
 
-
-          <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}>2024</p>
+          <p style={{fontSize:'20px',fontWeight:'bold'}} className="text-off-black dark:text-off-white">2025</p>
 
           <ul>
-            <li>down and out in the magic kingdom (currently reading)</li>
+            <li>why empires fall (currently reading)</li>
+
+            <li>the idea factory: bell labs and the great age of american innovation</li>
+
+            </ul>
+          
+
+          <p style={{fontSize:'20px',fontWeight:'bold'}} className="text-off-black dark:text-off-white">2024</p>
+
+          <ul>
 
             <li>the trial by kafka </li>
 
@@ -60,7 +55,7 @@ export function Books() {
           </ul>
 
 
-          <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}>2023</p>
+          <p style={{fontSize:'20px',fontWeight:'bold'}} className="text-off-black dark:text-off-white">2023 & beyond</p>
 
           <ul>
             
@@ -71,14 +66,6 @@ export function Books() {
             <li>and then there were none</li>
 
             <li>the fault in our stars</li>
-
-
-            
-          </ul>
-
-          <p style={{fontSize:'20px',fontWeight:'bold', color:'black'}}>2022 & beyond</p>
-
-          <ul>
 
             <li>sapiens</li>
 
