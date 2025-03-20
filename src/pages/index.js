@@ -106,7 +106,7 @@ export default function Home() {
                   />
                   <TableRow
                     href="https://minion.ai"
-                    title="Minion AI"
+                    title="Minion AI (acquired by Perplexity)"
                     subtitle="AI agents for web browsing"
                   />
                   <TableRow
