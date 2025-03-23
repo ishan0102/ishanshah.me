@@ -2,28 +2,28 @@ import Link from "next/link";
 
 export function Nav() {
   return (
-    <nav className="flex items-center justify-between p-4 md:p-6 border-b border-gray-200">
-      <div className="flex items-center flex-shrink-0 ml-0 md:ml-4 mr-6">
+    <nav className="flex items-center justify-between border-b border-gray-200 p-4 md:p-6">
+      <div className="ml-0 mr-6 flex flex-shrink-0 items-center md:ml-4">
         <Link
           href="/"
-          className="inline-block text-primary text-xl md:text-2xl font-semibold hover:text-indigo-500 font-grenette"
+          className="text-primary font-grenette inline-block text-xl font-semibold hover:text-indigo-500 md:text-2xl"
         >
           Ishan Shah
         </Link>
       </div>
-      <div className="flex items-center w-auto">
-        <div className="text-sm md:text-base font-normal md:font-medium md:flex-grow">
+      <div className="flex w-auto items-center">
+        <div className="text-sm font-normal md:flex-grow md:text-base md:font-medium">
           <Link
             href="/portfolio"
-            className="inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500"
+            className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
           >
             Portfolio
           </Link>
           <Link
-            href="https://ishan.coffee"
+            href="https://ishan.cafe"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500"
+            className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
           >
             Notes
           </Link>

@@ -12,10 +12,10 @@ const projectsList = [
     link: "https://github.com/ishan0102/vimGPT",
   },
   {
-    name: "ishan.coffee",
+    name: "ishan.cafe",
     date: "2023",
     tagline: "Zettelkasten for my brain using Quartz",
-    link: "https://www.ishan.coffee/",
+    link: "https://www.ishan.cafe/",
   },
   {
     name: "engblogs",
