@@ -25,7 +25,15 @@ export function Nav() {
             rel="noopener noreferrer"
             className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
           >
-            Notes
+            Writing
+          </Link>
+          <Link
+            href="https://rsrch.space"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
+          >
+            Reading
           </Link>
         </div>
       </div>
