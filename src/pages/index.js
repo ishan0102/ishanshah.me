@@ -106,7 +106,12 @@ export default function Home() {
                   />
                   <TableRow
                     href="https://minion.ai"
-                    title="Minion AI (acquired by Perplexity)"
+                    title={
+                      <>
+                        Minion AI
+                        <sup className="ml-1 text-xs text-gray-500">1</sup>
+                      </>
+                    }
                     subtitle="AI agents for web browsing"
                   />
                   <TableRow
@@ -124,6 +129,19 @@ export default function Home() {
                     title="Capital One"
                     subtitle="Fraud detection for car dealerships"
                   />
+                </div>
+              </SectionContent>
+            </SectionContainer>
+
+            {/* Acquisition Note */}
+            <SectionContainer>
+              <SectionTitle />
+              <SectionContent>
+                <div className="text-secondary -mt-10 text-sm italic">
+                  <p>
+                    <sup className="text-xs not-italic">1</sup> Minion AI was
+                    acquired by Perplexity in 2025.
+                  </p>
                 </div>
               </SectionContent>
             </SectionContainer>
