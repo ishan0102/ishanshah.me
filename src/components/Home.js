@@ -71,6 +71,7 @@ export function Home() {
                   things i&apos;ve worked on in the past or am currently working on :
                 </p>
                 <ul>
+                  <li>inference and compound ai systems @ groq</li>
                   <li>tinkering with chain of thought in reasoning models</li>
                   <li>research on interpreting Mixture of Experts (MoEs) for domain specialization. (paper published at ICLR&apos;25 Workshop on Sparsity in LLMs)</li>
                   <li>created a very fast and efficient model for image2latex for math equations using CNNs and transformers with my friends during summer</li>
@@ -103,6 +104,12 @@ export function Home() {
                   title={'twitter/𝕏'}
                   subtitle={'follow'}
                   date={''}
+                />
+                <TableRow
+                href={'https://scholar.google.com/citations?view_op=list_works&hl=en&user=YD3uM-4AAAAJ&gmla=ANZ5fUMO-b7o2UG733m8wLvuvn9mtxQFcbUPnEW177iA_VF-6ZhDwb6PzU6fwXSFxXE58cbKqHmOL5ed6HxSbMeG7c-wfNiIM_4'}
+                title={'google scholar'}
+                subtitle={'papers'}
+                date={''}
                 />
               </div>
             </SectionContent>

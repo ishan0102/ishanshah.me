@@ -14,7 +14,9 @@ export function Books() {
           <p style={{fontSize:'20px',fontWeight:'bold'}} className="text-off-black dark:text-off-white">2025</p>
 
           <ul>
-            <li>why empires fall (currently reading)</li>
+            <li>american prometheus (currently reading)</li>
+
+            <li>thinking in systems</li>
 
             <li>the idea factory: bell labs and the great age of american innovation</li>
 
