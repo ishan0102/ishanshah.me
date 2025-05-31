@@ -36,6 +36,23 @@
     font-style: normal;
   }
 
+  /* Instrument Serif */
+  @font-face {
+    font-family: 'InstrumentSerif';
+    src: url('../../public/static/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'InstrumentSerif';
+    src: url('../../public/static/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
   /* Invert highlight colors */
   ::selection {
     background-color: #6366f1;
@@ -61,7 +78,7 @@
 
   /* Apply the font to Tailwind's prose class */
   .prose {
-    font-family: 'Palatino', system-ui, -apple-system, BlinkMacSystemFont, 
+    font-family: 'InstrumentSerif', system-ui, -apple-system, BlinkMacSystemFont, 
       'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
       'Helvetica Neue', sans-serif;
   }
@@ -140,6 +157,10 @@
 
   .font-palatino {
     font-family: 'Palatino', serif;
+  }
+
+  .font-instrument-serif {
+    font-family: 'InstrumentSerif', serif;
   }
 }
 

@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'off-black': '#1e1e21',
-        'off-white': '#f5f2e9',
+        'off-black': '#000000',
+        'off-white': '#f7f2e0', // past was f5f2e9
       },
     },
     screens: {

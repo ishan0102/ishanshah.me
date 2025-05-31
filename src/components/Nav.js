@@ -14,7 +14,7 @@ export function Nav() {
   return (
     <nav className='flex items-center justify-between p-4 md:p-6 border-b border-gray-200 dark:border-none'>
       <div className='flex items-center flex-shrink-0 ml-0 md:ml-4 mr-6'>
-        <Link href='/' className='inline-block text-primary text-xl md:text-2xl font-semibold hover:text-indigo-500 font-grenette'>
+        <Link href='/' className='inline-block text-primary text-xl md:text-2xl font-semibold hover:text-indigo-500 font-instrument-serif'>
           marmik
         </Link>
         <button className='items-center bg-off-white ml-2 rounded dark:bg-off-black focus:outline-none' onClick={toggleTheme}>
@@ -25,13 +25,13 @@ export function Nav() {
       </div>
       <div className='flex items-center w-auto'>
         <div className='text-sm md:text-base font-normal md:font-medium md:flex-grow'>
-          <Link href='/books' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500 font-palatino'>
+          <Link href='/books' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500 font-instrument-serif'>
             books
           </Link>
-          <Link href='/blogs' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500 font-palatino'>
+          <Link href='/blogs' className='inline-block mr-3 md:mr-8 text-primary hover:text-indigo-500 font-instrument-serif'>
             blogs
           </Link>
-          <Link href='/static/pdf/resume.pdf' className='inline-block mr-3 text-primary hover:text-indigo-500 font-palatino' target='_blank' rel='noopener noreferrer'>
+          <Link href='/static/pdf/resume.pdf' className='inline-block mr-3 text-primary hover:text-indigo-500 font-instrument-serif' target='_blank' rel='noopener noreferrer'>
             resume
           </Link>
         </div>

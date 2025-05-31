@@ -2,7 +2,7 @@ export function Books() {
   return (
     <div className='relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8'>
       <div className='mx-auto w-full max-w-2xl mt-4 sm:mt-8 mb-52 md:mb-32'>
-        <div className='prose mb-2 sm:mb-6' >
+        <div className='prose mb-2 sm:mb-6 font-instrument-serif' >
 
         <p style={{fontSize:'16px'}}> </p>
 

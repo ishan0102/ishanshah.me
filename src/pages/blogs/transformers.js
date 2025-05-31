@@ -40,7 +40,7 @@ export default function TransformersBlog({ blogContent }) {
       <Detail.Container>
         <Detail.ContentContainer>
           <article 
-            className='prose prose-lg dark:prose-invert max-w-none px-8
+            className='prose prose-lg dark:prose-invert max-w-none px-8 font-instrument-serif
               prose-pre:bg-gray-100 prose-pre:dark:bg-gray-800
               prose-code:text-gray-800 prose-code:dark:text-gray-200
               prose-code:before:content-none prose-code:after:content-none

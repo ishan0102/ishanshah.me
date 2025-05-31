@@ -5,7 +5,7 @@ import Link from 'next/link'
 function SectionTitle(props) {
   return (
     <h4
-      className='col-span-2 text-lg font-semibold text-primary md:text-right md:text-base md:font-normal md:text-opacity-40 font-palatino'
+      className='col-span-2 text-3xl font-bold text-black dark:text-white md:text-right md:text-2xl font-instrument-serif'
       {...props}
     />
   )
@@ -21,12 +21,12 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className='flex items-center space-x-4 group'
     >
-      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500 font-palatino'>
+      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500 font-instrument-serif'>
         {title}
       </strong>
       <span className='w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800' />
-      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base font-palatino'>{subtitle}</span>}
-      {date && <span className='flex-none font-mono text-quaternary hidden md:flex font-palatino'>{date}</span>}
+      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base font-instrument-serif'>{subtitle}</span>}
+      {date && <span className='flex-none font-mono text-quaternary hidden md:flex font-instrument-serif'>{date}</span>}
     </a>
   )
 }
@@ -62,21 +62,21 @@ export function Home() {
           <SectionContainer>
           <SectionTitle>about</SectionTitle>
             <SectionContent>
-              <div className='prose -mb-8'>
+              <div className='prose -mb-8 font-instrument-serif'>
                 <p>
-                  hey, i&apos;m marmik. i&apos;m a 19 yo cs + math major at penn state university. i spend most of my time understanding deep learning, working on neural nets, building cool things with them for fun and exploring math.
-                  apart from this i love watching movies and have also been painting since a long time and still enjoy doing it in free time.
+                  hey, welcome to my web <em>eden</em>. i&apos;m a 20 yo cs + math major at penn state university. i spend most of my time working on <em>interpretability</em> research for neural nets, reading deep learning papers and exploring math.
+                  apart from this, i&apos;ve been <em>painting</em> since a long time and have also been learning to play <em>guitar</em> recently. i also love watching movies and reading <Link href='/books' className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 font-instrument-serif'>books</Link>.
                 </p>
                 <p className='-mb-2'>
                   things i&apos;ve worked on in the past or am currently working on :
                 </p>
                 <ul>
                   <li>inference and compound ai systems @ groq</li>
-                  <li>tinkering with chain of thought in reasoning models</li>
-                  <li>research on interpreting Mixture of Experts (MoEs) for domain specialization. (paper published at ICLR&apos;25 Workshop on Sparsity in LLMs)</li>
-                  <li>created a very fast and efficient model for image2latex for math equations using CNNs and transformers with my friends during summer</li>
+                  <li>tinkering with chain of thought faithfulness in reasoning models</li>
+                  <li>research on interpreting Mixture of Experts (MoEs) for domain specialization. (published at ICLR&apos;25 Workshop on Sparsity in LLMs)</li>
+                  <li>created a very fast and accurate model for image-to-latex for math equations using CNNs and transformers with my friends during summer&apos;24</li>
                   <li>ml developer at a startup working on ocr using vision transformers</li>
-                  <li>computer vision algorithms for a fully autonomous robot for <Link href='https://www.robomaster.com/en-US' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200'>robomaster</Link> league team @ penn state</li>
+                  <li>computer vision algorithms for a fully autonomous robot for <Link href='https://www.robomaster.com/en-US' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 font-instrument-serif'>robomaster</Link> league team @ penn state</li>
                 </ul>
               </div>
             </SectionContent>
