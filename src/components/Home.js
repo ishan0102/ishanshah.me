@@ -12,7 +12,7 @@ function SectionTitle(props) {
 }
 
 function SectionContent(props) {
-  return <div className='col-span-10' {...props} />
+  return <div className='col-span-12' {...props} />
 }
 
 function TableRow({ href, title, subtitle, date }) {
@@ -47,27 +47,41 @@ export function Home() {
 
         {/* Avatar */}
         <div className='justify-center flex mb-6 md:ml-20 dark:hidden'>
-          <Image
+          {/* <Image
             src='/static/img/home.JPG'
             alt='marmik'
             width={200}
             height={200}
             quality={75}
             className='rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl filter-image'
-          />
+          /> */}
         </div>
 
-        <div className='pb-24 md:pb-4 space-y-12 md:space-y-16 dark:mt-8'>
+        <div className=' pb-24 md:pb-4 space-y-12 md:space-y-16 dark:mt-8'>
           {/* Bio */}
           <SectionContainer>
-          <SectionTitle>about</SectionTitle>
+          {/* <SectionTitle>about</SectionTitle> */}
             <SectionContent>
-              <div className='prose -mb-8 font-instrument-serif'>
-                <p>
-                  hey, welcome to my web <em>eden</em>. i&apos;m a 20 yo cs + math major at penn state university. i spend most of my time working on <em>interpretability</em> research for neural nets, reading deep learning papers and exploring math.
+              <div className='prose prose-lg max-w-none -mb-8 font-instrument-serif'>
+                <p className='text-3xl font-bold'>hey, i&apos;m Marmik</p>
+                <p className='text-lg'>welcome to my web <em>eden</em>.</p>
+                
+                {/* SVG Image */}
+                <div className='flex justify-center my-6'>
+                  <Image
+                    src='/static/img/blossom.svg'
+                    alt='blossom decoration'
+                    width={120}
+                    height={20}
+                    className='opacity-70 dark:opacity-50'
+                  />
+                </div>
+                
+                <p className='text-lg'>
+                   i&apos;m a 20 yo cs + math major at penn state university. i spend most of my time working on <em>interpretability</em> research for neural nets, reading deep learning papers and exploring math.
                   apart from this, i&apos;ve been <em>painting</em> since a long time and have also been learning to play <em>guitar</em> recently. i also love watching movies and reading <Link href='/books' className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 font-instrument-serif'>books</Link>.
                 </p>
-                <p className='-mb-2'>
+                <p className='text-lg -mb-2'>
                   things i&apos;ve worked on in the past or am currently working on :
                 </p>
                 <ul>
@@ -84,7 +98,7 @@ export function Home() {
 
           {/* Socials */}
           <SectionContainer>
-            <SectionTitle>online</SectionTitle>
+            {/* <SectionTitle>online</SectionTitle> */}
             <SectionContent>
               <div className='flex flex-col space-y-3'>
                 <TableRow

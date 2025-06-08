@@ -5,8 +5,8 @@ export function Blogs() {
     <div className='relative flex max-h-screen w-full flex-col overflow-y-scroll scrollbar-hide scroll-smooth px-8'>
       <div className='mx-auto w-full max-w-2xl mt-4 sm:mt-8 mb-52 md:mb-32'>
         <div className='prose mb-2 sm:mb-6 font-instrument-serif'>
-          <h2 className='text-2xl font-bold mb-4 font-instrument-serif'>my blogs</h2>
-          <p>
+          {/* <h2 className='text-2xl font-instrument-serif font-bold mb-4'>my blogs</h2> */}
+          <p className='font-instrument-serif'>
             i write about stuff that i find interesting or anything about deep learning, neural nets or insights on papers.
           </p>
           <ul className='space-y-2'>
