@@ -5,7 +5,7 @@ import Link from 'next/link'
 function SectionTitle(props) {
   return (
     <h4
-      className='col-span-2 text-3xl font-bold text-black dark:text-white md:text-right md:text-2xl font-instrument-serif'
+      className='col-span-2 text-3xl font-bold text-black dark:text-white md:text-right md:text-2xl font-source-serif-4'
       {...props}
     />
   )
@@ -21,12 +21,12 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className='flex items-center space-x-4 group'
     >
-      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500 font-instrument-serif'>
+      <strong className='flex-none font-medium text-gray-900 group-hover:text-indigo-600 dark:text-gray-100 dark:group-hover:text-indigo-500 font-source-serif-4'>
         {title}
       </strong>
       <span className='w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800' />
-      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base font-instrument-serif'>{subtitle}</span>}
-      {date && <span className='flex-none font-mono text-quaternary hidden md:flex font-instrument-serif'>{date}</span>}
+      {subtitle && <span className='flex-none text-tertiary text-sm md:text-base font-source-serif-4'>{subtitle}</span>}
+      {date && <span className='flex-none font-mono text-quaternary hidden md:flex font-source-serif-4'>{date}</span>}
     </a>
   )
 }
@@ -62,9 +62,9 @@ export function Home() {
           <SectionContainer>
           {/* <SectionTitle>about</SectionTitle> */}
             <SectionContent>
-              <div className='prose prose-lg max-w-none -mb-8 font-instrument-serif'>
-                <p className='text-3xl font-bold'>hey, i&apos;m Marmik</p>
-                <p className='text-lg'>welcome to my web <em>eden</em>.</p>
+              <div className='prose prose-lg max-w-none -mb-8 font-source-serif-4'>
+                <p className='text-3xl font-bold font-instrument-serif'>hey, i&apos;m Marmik</p>
+                <p className='text-xl font-instrument-serif'>welcome to my web <em>eden</em>.</p>
                 
                 {/* SVG Image */}
                 {/* <div className='flex justify-center my-6'>
@@ -79,7 +79,7 @@ export function Home() {
                 
                 <p className='text-lg'>
                    i&apos;m a 20 yo cs + math major at penn state university. i spend most of my time working on <em>interpretability</em> research for neural nets, reading deep learning papers and exploring math.
-                  apart from this, i&apos;ve been <em>painting</em> since a long time and have also been learning to play <em>guitar</em> recently. i also love watching movies and reading <Link href='/books' className='text-amber-800 hover:text-amber-950 dark:text-amber-600 dark:hover:text-amber-400 font-instrument-serif underline decoration-solid'>books</Link>.
+                  apart from this, i&apos;ve been <em>painting</em> since a long time and have also been learning to play <em>guitar</em> recently. i also love watching movies and reading <Link href='/books' className='text-amber-800 hover:text-amber-950 dark:text-amber-600 dark:hover:text-amber-400 font-source-serif-4 underline decoration-solid'>books</Link>.
                 </p>
                 <p className='text-lg -mb-2'>
                   things i&apos;ve worked on in the past or am currently working on :
@@ -90,7 +90,7 @@ export function Home() {
                   <li>research on interpreting Mixture of Experts (MoEs) for domain specialization. (published at ICLR&apos;25 Workshop on Sparsity in LLMs)</li>
                   <li>created a very fast and accurate model for image-to-latex for math equations using CNNs and transformers with my friends during summer&apos;24</li>
                   <li>ml developer at a startup working on ocr using vision transformers</li>
-                  <li>computer vision algorithms for a fully autonomous robot for <Link href='https://www.robomaster.com/en-US' target='_blank' rel='noopener noreferrer' className='text-amber-800 hover:text-amber-950 dark:text-amber-600 dark:hover:text-amber-400 font-instrument-serif underline decoration-solid'>robomaster</Link> league team @ penn state</li>
+                  <li>computer vision algorithms for a fully autonomous robot for <Link href='https://www.robomaster.com/en-US' target='_blank' rel='noopener noreferrer' className='text-amber-800 hover:text-amber-950 dark:text-amber-600 dark:hover:text-amber-400 font-source-serif-4 underline decoration-solid'>robomaster</Link> league team @ penn state</li>
                 </ul>
               </div>
             </SectionContent>
@@ -103,7 +103,7 @@ export function Home() {
           <SectionContainer>
             {/* <SectionTitle>online</SectionTitle> */}
             <SectionContent>
-              <div className='flex justify-center space-x-8 md:space-x-12 font-instrument-serif text-xl'>
+              <div className='flex justify-center space-x-8 md:space-x-12 font-source-serif-4 text-xl'>
                 <a
                   href='mailto:marmik@psu.edu'
                   className='font-bold text-gray-600 hover:text-amber-900 dark:text-gray-300 dark:hover:text-amber-700 transition-colors underline decoration-dashed underline-offset-4'

@@ -7,7 +7,7 @@ export function Books() {
         <div className='pb-24 md:pb-4 space-y-12 md:space-y-16'>
           <div className='grid items-start grid-cols-1 md:grid-cols-12 gap-3 md:gap-6'>
             <div className='col-span-12'>
-              <div className='prose prose-lg max-w-none -mb-8 font-instrument-serif'>
+              <div className='prose prose-lg max-w-none -mb-8 font-source-serif-4'>
 
                 <p style={{fontSize:'16px'}}> </p>
 

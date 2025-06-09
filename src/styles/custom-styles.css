@@ -53,18 +53,36 @@
     font-display: swap;
   }
 
-  /* Invert highlight colors */
-  ::selection {
-    background-color: #c3ae88;
-    color: #ffffff;
-  }
-
+  /* Palatino */
   @font-face {
     font-family: 'Palatino';
     src: url('../../public/static/fonts/palatinolinotype_roman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* This helps with font loading performance */
+  }
+
+  /* Source Serif 4 */
+  @font-face {
+    font-family: 'SourceSerif4';
+    src: url('../../public/static/fonts/source-serif-4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SourceSerif4';
+    src: url('../../public/static/fonts/source-serif-4-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  /* Invert highlight colors */
+  ::selection {
+    background-color: #c3ae88;
+    color: #ffffff;
   }
 
   /* Apply the font to the entire website */
@@ -162,9 +180,13 @@
     font-family: 'InstrumentSerif', serif;
   }
 
+  .font-source-serif-4 {
+    font-family: 'SourceSerif4', serif;
+  }
+
   /* Asterism text divider */
   .asterism {
-    @apply text-center my-8 font-instrument-serif;
+    @apply text-center my-8 font-source-serif-4;
     color: #d4c4a8;
     font-size: 1.5rem;
     letter-spacing: 0.5rem;

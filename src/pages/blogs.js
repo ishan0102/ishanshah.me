@@ -3,7 +3,7 @@ import { Blogs } from '../components/Blogs'
 
 export default function BlogsPage() {
   return (
-    <div className="font-instrument-serif">
+    <div className="font-source-serif-4">
       <Blogs />
       <Head>
         <title>my blogs</title>
