@@ -1,9 +1,20 @@
 import { Detail } from './Detail'
+import { Bookshelf } from './Bookshelf'
+import { booksData } from '../data/booksData'
 
 export function Books() {
   return (
     <Detail.Container>
       <Detail.ContentContainer>
+        
+        {/* Bookshelf 3D Visualization */}
+        <div className='mb-8'>
+          <Bookshelf books={booksData} />
+        </div>
+
+        {/* Asterism Divider */}
+        <div className="asterism"></div>
+
         <div className='pb-24 md:pb-4 space-y-12 md:space-y-16'>
           <div className='grid items-start grid-cols-1 md:grid-cols-12 gap-3 md:gap-6'>
             <div className='col-span-12'>

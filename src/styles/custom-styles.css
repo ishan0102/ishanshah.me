@@ -199,6 +199,207 @@
   .asterism::before {
     content: "✱ ✱ ✱";
   }
+
+  /* Bookshelf Component Styles */
+  .bookshelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+    gap: 2px;
+    padding: 20px 0;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+  }
+
+  .book-spine {
+    height: 220px;
+    width: 42px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 2px;
+    position: relative;
+    transform-style: preserve-3d;
+    filter: brightness(0.8) contrast(2);
+  }
+
+  .book-spine:hover {
+    transform: translateY(-3px) rotateY(-5deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+
+  .dark .book-spine:hover {
+    box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+  }
+
+  .book-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 180px;
+    white-space: nowrap;
+  }
+
+  .book-author {
+    font-size: 0.65rem;
+    opacity: 0.85;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: auto;
+  }
+
+  /* 3D Effects for bookshelf */
+  .book-cover {
+    position: absolute;
+    top: 0;
+    left: 42px;
+    width: 168px;
+    height: 220px;
+    transform-origin: left;
+    transform: rotateY(88.8deg);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    filter: brightness(0.8) contrast(2);
+  }
+
+  .book-spine.expanded .book-cover {
+    transform: rotateY(30deg);
+  }
+
+  .book-spine.expanded {
+    transform: rotateY(-60deg);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bookshelf-grid {
+      grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+      gap: 1px;
+    }
+    
+    .book-spine {
+      height: 180px;
+      width: 32px;
+      padding: 8px 3px;
+    }
+    
+    .book-title {
+      font-size: 0.65rem;
+      max-height: 140px;
+    }
+    
+    .book-author {
+      font-size: 0.55rem;
+    }
+
+    .book-cover {
+      left: 32px;
+      width: 128px;
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bookshelf-grid {
+      grid-template-columns: repeat(auto-fill, minmax(28px, 1fr));
+    }
+    
+    .book-spine {
+      height: 160px;
+      width: 28px;
+      padding: 6px 2px;
+    }
+    
+    .book-title {
+      font-size: 0.6rem;
+      max-height: 120px;
+    }
+    
+    .book-author {
+      font-size: 0.5rem;
+    }
+
+    .book-cover {
+      left: 28px;
+      width: 112px;
+      height: 160px;
+    }
+  }
+
+  /* Paper texture and binding effects */
+  .paper-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    pointer-events: none;
+    filter: url(#paper);
+    z-index: 50;
+  }
+
+  .binding-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0) 2px, 
+      rgba(255, 255, 255, 0.5) 3px, 
+      rgba(255, 255, 255, 0.25) 4px, 
+      rgba(255, 255, 255, 0.25) 6px, 
+      transparent 7px, 
+      transparent 9px, 
+      rgba(255, 255, 255, 0.25) 9px, 
+      transparent 12px
+    );
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  /* Enhanced scroll controls */
+  .bookshelf-scroll-button {
+    @apply flex items-center justify-center w-7 h-full rounded-md transition-colors duration-200;
+    @apply hover:bg-gray-100 dark:hover:bg-gray-800;
+    @apply cursor-pointer select-none;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .dark .bookshelf-scroll-button {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Animation keyframes */
+  @keyframes bookHover {
+    0% { transform: translateY(0) rotateY(0deg); }
+    100% { transform: translateY(-3px) rotateY(-5deg); }
+  }
+
+  @keyframes bookExpand {
+    0% { 
+      transform: rotateY(0deg);
+      width: 42px;
+    }
+    100% { 
+      transform: rotateY(-60deg);
+      width: 210px;
+    }
+  }
 }
 
 @font-face {

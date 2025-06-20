@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.21.0",
+    "@emotion/react": "^11.14.0",
+    "@nikolovlazar/chakra-ui-prose": "^1.2.1",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
+    "gray-matter": "^4.0.3",
     "katex": "^0.16.11",
     "next": "^15.0.4",
+    "next-mdx-remote": "^5.0.0",
     "next-seo": "^5.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
