@@ -13,16 +13,7 @@ const defaultSEO = {
     // url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/',
     url: 'https://marmik.xyz/',
     site_name: 'Marmik',
-    images: [
-      {
-        url: 'https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg',
-        alt: 'marmik',
-      },
-      {
-        url: 'https://marmik.xyz/static/banner.jpeg',
-        alt: 'marmik',
-      }
-    ],
+    images: [],
   },
   twitter: {
     handle: '@marmikch',
@@ -58,8 +49,8 @@ export function Providers() {
 
         {/* OpenGraph */}
         <meta property='og:title' content='Marmik Chaudhari' key='title' />
-        <meta property='og:image' content='https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg' />
-        <meta property='og:image' content='https://marmik.xyz/static/banner.jpeg' />
+        {/* <meta property='og:image' content='https://marmik-xyz-marmikchaudharis-projects.vercel.app/static/banner.jpeg' /> */}
+        {/* <meta property='og:image' content='https://marmik.xyz/static/banner.jpeg' /> */}
 
       </Head>
 

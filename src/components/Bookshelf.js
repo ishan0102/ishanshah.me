@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
 export function Bookshelf({ books }) {
   // State management
   const [bookIndex, setBookIndex] = useState(-1);
-  const [scroll, setScroll] = useState(-200);
+  const [scroll, setScroll] = useState(0);
   const [isClient, setIsClient] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [booksInViewport, setBooksInViewport] = useState(0);
@@ -16,6 +16,27 @@ export function Bookshelf({ books }) {
   const scrollRightRef = useRef(null);
   const scrollLeftRef = useRef(null);
 
+  // Responsive scroll events (mimicking useBreakpointValue)
+  const [scrollEvents, setScrollEvents] = useState({
+    start: "mouseenter",
+    stop: "mouseleave"
+  });
+
+  // Update scroll events based on window size
+  useEffect(() => {
+    const updateScrollEvents = () => {
+      if (window.innerWidth < 640) { // sm breakpoint
+        setScrollEvents({ start: "touchstart", stop: "touchend" });
+      } else {
+        setScrollEvents({ start: "mouseenter", stop: "mouseleave" });
+      }
+    };
+
+    updateScrollEvents();
+    window.addEventListener('resize', updateScrollEvents);
+    return () => window.removeEventListener('resize', updateScrollEvents);
+  }, []);
+
   // Constants
   const width = 41.5;
   const height = 220;
@@ -23,16 +44,24 @@ export function Bookshelf({ books }) {
   const coverWidth = `${width * 4}px`;
   const bookWidth = `${width * 5}px`;
   const bookHeight = `${height}px`;
+  
+  // Scroll behavior parameters - ADJUST THESE TO CONTROL SCROLLING
+  const SCROLL_SPEED = 1;           // Pixels per interval (higher = faster)
+  const SCROLL_INTERVAL = 10;       // Milliseconds between scroll steps (lower = smoother)
+  const SCROLL_ACCELERATION = 1.2;  // Multiplier for faster scrolling on mousedown
 
   // Sort books by rating (highest first)
   const sortedBooks = [...books].sort((a, b) => b.rating - a.rating);
 
   // Scroll boundaries
   const minScroll = 0;
-  const maxScroll = Math.max(0, 
-    (width + 12) * (sortedBooks.length - booksInViewport) +
-    (bookIndex > -1 ? width * 4 : 0) + 5
-  );
+  const maxScroll = useMemo(() => {
+    return Math.max(0,
+      (width + 12) * (sortedBooks.length - booksInViewport) +
+      (bookIndex > -1 ? width * 4 : 0) +
+      5
+    );
+  }, [bookIndex, sortedBooks.length, booksInViewport]);
 
   // Client-side rendering check
   useEffect(() => {
@@ -40,59 +69,71 @@ export function Bookshelf({ books }) {
   }, []);
 
   // Bounded scroll function
-  const boundedScroll = useCallback((scrollX) => {
+  const boundedScroll = (scrollX) => {
     setScroll(Math.max(minScroll, Math.min(maxScroll, scrollX)));
-  }, [minScroll, maxScroll]);
+  };
 
   // Bounded relative scroll function
-  const boundedRelativeScroll = useCallback((incrementX) => {
-    setScroll((prevScroll) =>
-      Math.max(minScroll, Math.min(maxScroll, prevScroll + incrementX))
-    );
-  }, [minScroll, maxScroll]);
+  const boundedRelativeScroll = useCallback(
+    (incrementX) => {
+      setScroll((_scroll) =>
+        Math.max(minScroll, Math.min(maxScroll, _scroll + incrementX))
+      );
+    },
+    [maxScroll]
+  );
 
-  // Handle viewport resize
+  // Handle viewport resize (mimicking useDimensions)
   useEffect(() => {
     const handleResize = () => {
       if (viewportRef.current) {
-        const width = viewportRef.current.offsetWidth;
-        setViewportWidth(width);
-        const numberOfBooks = width / (width + 11);
+        boundedRelativeScroll(0);
+        const numberOfBooks = viewportRef.current.offsetWidth / (width + 12);
         setBooksInViewport(numberOfBooks);
+        setViewportWidth(viewportRef.current.offsetWidth);
       }
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [boundedRelativeScroll]);
 
   // Handle book index changes
   useEffect(() => {
     if (bookIndex === -1) {
       boundedRelativeScroll(0);
     } else {
-      boundedScroll((bookIndex - (booksInViewport - 4.5) / 2) * (width + 11));
+      boundedScroll((bookIndex - (booksInViewport - 4.5) / 2) * (width + 12));
     }
   }, [bookIndex, boundedRelativeScroll, boundedScroll, booksInViewport]);
 
-  // Scroll control handlers
+  // Scroll control handlers (exact Chakra logic)
   useEffect(() => {
+    if (!scrollEvents) {
+      return;
+    }
+
+    // Create a copy of the scroll events to save for clean-up
+    // So it doesn't switch underneath causing us to clean-up the wrong listeners
+    const currentScrollEvents = { ...scrollEvents };
+
     const currentScrollRightRef = scrollRightRef.current;
     const currentScrollLeftRef = scrollLeftRef.current;
+
     let scrollInterval = null;
 
     const setScrollRightInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(3);
+        boundedRelativeScroll(2);
       }, 10);
     };
 
     const setScrollLeftInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(-3);
+        boundedRelativeScroll(-2);
       }, 10);
     };
 
@@ -103,29 +144,54 @@ export function Bookshelf({ books }) {
       }
     };
 
-    // Mouse events for desktop
     if (currentScrollRightRef) {
-      currentScrollRightRef.addEventListener('mouseenter', setScrollRightInterval);
-      currentScrollRightRef.addEventListener('mouseleave', clearScrollInterval);
+      currentScrollRightRef.addEventListener(
+        currentScrollEvents.start,
+        setScrollRightInterval
+      );
+      currentScrollRightRef.addEventListener(
+        currentScrollEvents.stop,
+        clearScrollInterval
+      );
     }
 
     if (currentScrollLeftRef) {
-      currentScrollLeftRef.addEventListener('mouseenter', setScrollLeftInterval);
-      currentScrollLeftRef.addEventListener('mouseleave', clearScrollInterval);
+      currentScrollLeftRef.addEventListener(
+        currentScrollEvents.start,
+        setScrollLeftInterval
+      );
+      currentScrollLeftRef.addEventListener(
+        currentScrollEvents.stop,
+        clearScrollInterval
+      );
     }
 
     return () => {
       clearScrollInterval();
+
       if (currentScrollRightRef) {
-        currentScrollRightRef.removeEventListener('mouseenter', setScrollRightInterval);
-        currentScrollRightRef.removeEventListener('mouseleave', clearScrollInterval);
+        currentScrollRightRef.removeEventListener(
+          currentScrollEvents.start,
+          setScrollRightInterval
+        );
+        currentScrollRightRef.removeEventListener(
+          currentScrollEvents.stop,
+          clearScrollInterval
+        );
       }
+
       if (currentScrollLeftRef) {
-        currentScrollLeftRef.removeEventListener('mouseenter', setScrollLeftInterval);
-        currentScrollLeftRef.removeEventListener('mouseleave', clearScrollInterval);
+        currentScrollLeftRef.removeEventListener(
+          currentScrollEvents.start,
+          setScrollLeftInterval
+        );
+        currentScrollLeftRef.removeEventListener(
+          currentScrollEvents.stop,
+          clearScrollInterval
+        );
       }
     };
-  }, [boundedRelativeScroll]);
+  }, [boundedRelativeScroll, scrollEvents]);
 
   // Book click handler
   const handleBookClick = (index) => {
@@ -186,7 +252,7 @@ export function Bookshelf({ books }) {
         {/* Main bookshelf container */}
         <div
           ref={viewportRef}
-          className="flex items-center gap-1 overflow-hidden cursor-grab active:cursor-grabbing"
+          className="flex items-center gap-3 overflow-hidden cursor-grab active:cursor-grabbing"
           style={{ height: bookHeight }}
         >
           {sortedBooks.map((book, index) => (
