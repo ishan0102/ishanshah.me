@@ -6,7 +6,7 @@ export default function home() {
     <>
       <Home/>
       <Head>
-        <title>marmik&apos;s digital space</title>
+        <title>marmik&apos;s web eden</title>
         <meta property='og:title' content='marmik chaudhari' key='title' />
       </Head>
     </>

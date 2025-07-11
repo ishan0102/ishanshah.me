@@ -6,7 +6,7 @@ export default function BlogsPage() {
     <div className="font-source-serif-4">
       <Blogs />
       <Head>
-        <title>my blogs</title>
+        <title>blogs</title>
         <meta property='og:title' content='my blogs' key='title' />
       </Head>
     </div>

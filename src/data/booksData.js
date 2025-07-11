@@ -3,7 +3,6 @@ export const booksData = [
   {
     title: "American Prometheus",
     author: "Kai Bird & Martin J. Sherwin",
-    rating: 8,
     spineColor: "#8B4513",
     textColor: "#FFFFFF",
     slug: "american-prometheus",
@@ -14,7 +13,6 @@ export const booksData = [
   {
     title: "Thinking in Systems",
     author: "Donella H. Meadows",
-    rating: 9,
     spineColor: "#2E8B57",
     textColor: "#FFFFFF",
     slug: "thinking-in-systems",
@@ -24,7 +22,6 @@ export const booksData = [
   {
     title: "The Idea Factory: Bell Labs and the Great Age of American Innovation",
     author: "Jon Gertner",
-    rating: 9,
     spineColor: "#4682B4",
     textColor: "#FFFFFF",
     slug: "idea-factory",
@@ -36,7 +33,6 @@ export const booksData = [
   {
     title: "The Trial",
     author: "Franz Kafka",
-    rating: 8,
     spineColor: "#2F4F4F",
     textColor: "#FFFFFF",
     slug: "the-trial",
@@ -46,7 +42,6 @@ export const booksData = [
   {
     title: "Murder on the Orient Express",
     author: "Agatha Christie",
-    rating: 8,
     spineColor: "#DC143C",
     textColor: "#FFFFFF",
     slug: "murder-orient-express",
@@ -56,7 +51,6 @@ export const booksData = [
   {
     title: "Norwegian Wood",
     author: "Haruki Murakami",
-    rating: 9,
     spineColor: "#228B22",
     textColor: "#FFFFFF",
     slug: "norwegian-wood",
@@ -66,7 +60,6 @@ export const booksData = [
   {
     title: "A Brief History of Intelligence",
     author: "Max Bennett",
-    rating: 9,
     spineColor: "#4169E1",
     textColor: "#FFFFFF",
     slug: "brief-history-intelligence",
@@ -76,7 +69,6 @@ export const booksData = [
   {
     title: "Do Androids Dream of Electric Sheep?",
     author: "Philip K. Dick",
-    rating: 9,
     spineColor: "#FF6347",
     textColor: "#FFFFFF",
     slug: "androids-electric-sheep",
@@ -86,7 +78,6 @@ export const booksData = [
   {
     title: "Children of Dune",
     author: "Frank Herbert",
-    rating: 8,
     spineColor: "#D2691E",
     textColor: "#FFFFFF",
     slug: "children-of-dune",
@@ -96,7 +87,6 @@ export const booksData = [
   {
     title: "Surely You're Joking, Mr. Feynman!",
     author: "Richard P. Feynman",
-    rating: 10,
     spineColor: "#FF4500",
     textColor: "#FFFFFF",
     slug: "surely-joking-feynman",
@@ -106,7 +96,6 @@ export const booksData = [
   {
     title: "Looking for Alaska",
     author: "John Green",
-    rating: 8,
     spineColor: "#32CD32",
     textColor: "#000000",
     slug: "looking-for-alaska",
@@ -116,7 +105,6 @@ export const booksData = [
   {
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
-    rating: 8,
     spineColor: "#FFD700",
     textColor: "#000000",
     slug: "great-gatsby",
@@ -126,7 +114,6 @@ export const booksData = [
   {
     title: "Dune Messiah",
     author: "Frank Herbert",
-    rating: 8,
     spineColor: "#CD853F",
     textColor: "#FFFFFF",
     slug: "dune-messiah",
@@ -136,7 +123,6 @@ export const booksData = [
   {
     title: "Dune",
     author: "Frank Herbert",
-    rating: 10,
     spineColor: "#F4A460",
     textColor: "#000000",
     slug: "dune",
@@ -146,7 +132,6 @@ export const booksData = [
   {
     title: "Foundation",
     author: "Isaac Asimov",
-    rating: 9,
     spineColor: "#483D8B",
     textColor: "#FFFFFF",
     slug: "foundation",
@@ -156,7 +141,6 @@ export const booksData = [
   {
     title: "The Fellowship of the Ring",
     author: "J.R.R. Tolkien",
-    rating: 9,
     spineColor: "#228B22",
     textColor: "#FFFFFF",
     slug: "fellowship-ring",
@@ -168,7 +152,6 @@ export const booksData = [
   {
     title: "1984",
     author: "George Orwell",
-    rating: 10,
     spineColor: "#B22222",
     textColor: "#FFFFFF",
     slug: "1984",
@@ -178,7 +161,6 @@ export const booksData = [
   {
     title: "The Lightning Thief",
     author: "Rick Riordan",
-    rating: 7,
     spineColor: "#1E90FF",
     textColor: "#FFFFFF",
     slug: "lightning-thief",
@@ -188,7 +170,6 @@ export const booksData = [
   {
     title: "And Then There Were None",
     author: "Agatha Christie",
-    rating: 9,
     spineColor: "#8B0000",
     textColor: "#FFFFFF",
     slug: "and-then-there-were-none",
@@ -198,7 +179,6 @@ export const booksData = [
   {
     title: "The Fault in Our Stars",
     author: "John Green",
-    rating: 8,
     spineColor: "#FF69B4",
     textColor: "#FFFFFF",
     slug: "fault-in-stars",
@@ -208,7 +188,6 @@ export const booksData = [
   {
     title: "Sapiens",
     author: "Yuval Noah Harari",
-    rating: 9,
     spineColor: "#DAA520",
     textColor: "#000000",
     slug: "sapiens",
@@ -218,7 +197,6 @@ export const booksData = [
   {
     title: "Steve Jobs",
     author: "Walter Isaacson",
-    rating: 10,
     spineColor: "#000000",
     textColor: "#FFFFFF",
     slug: "steve-jobs",
@@ -228,7 +206,6 @@ export const booksData = [
   {
     title: "Man's Search for Meaning",
     author: "Viktor E. Frankl",
-    rating: 10,
     spineColor: "#2F4F4F",
     textColor: "#FFFFFF",
     slug: "mans-search-meaning",
@@ -238,7 +215,6 @@ export const booksData = [
   {
     title: "21 Lessons for the 21st Century",
     author: "Yuval Noah Harari",
-    rating: 8,
     spineColor: "#4682B4",
     textColor: "#FFFFFF",
     slug: "21-lessons",
@@ -248,7 +224,6 @@ export const booksData = [
   {
     title: "How Google Works",
     author: "Eric Schmidt & Jonathan Rosenberg",
-    rating: 8,
     spineColor: "#4285F4",
     textColor: "#FFFFFF",
     slug: "how-google-works",
@@ -258,7 +233,6 @@ export const booksData = [
   {
     title: "The Innovators",
     author: "Walter Isaacson",
-    rating: 9,
     spineColor: "#FF6B35",
     textColor: "#FFFFFF",
     slug: "the-innovators",
@@ -268,7 +242,6 @@ export const booksData = [
   {
     title: "Einstein: His Life and Universe",
     author: "Walter Isaacson",
-    rating: 9,
     spineColor: "#6A5ACD",
     textColor: "#FFFFFF",
     slug: "einstein",
@@ -278,7 +251,6 @@ export const booksData = [
   {
     title: "Atomic Habits",
     author: "James Clear",
-    rating: 9,
     spineColor: "#20B2AA",
     textColor: "#FFFFFF",
     slug: "atomic-habits",
@@ -288,12 +260,20 @@ export const booksData = [
   {
     title: "Deep Work",
     author: "Cal Newport",
-    rating: 9,
     spineColor: "#191970",
     textColor: "#FFFFFF",
     slug: "deep-work",
     date: "2020",
     coverImage: "/static/books/deep-work.jpg"
+  },
+  {
+    title: "Bhagavad Gita",
+    author: "Ved Vyas",
+    spineColor: "#FF8C00",
+    textColor: "#FFFFFF",
+    slug: "bhagavad-gita",
+    date: "2020",
+    coverImage: "/static/books/bhag-gita.jpg"
   }
 ];
 
@@ -302,9 +282,9 @@ export const getBooksByYear = (year) => {
   return booksData.filter(book => book.date === year.toString());
 };
 
-// Helper function to get books sorted by rating
-export const getBooksByRating = () => {
-  return [...booksData].sort((a, b) => b.rating - a.rating);
+// Helper function to get books sorted by title
+export const getBooksByTitle = () => {
+  return [...booksData].sort((a, b) => a.title.localeCompare(b.title));
 };
 
 // Helper function to get all unique years

@@ -17,9 +17,19 @@ export function Blogs() {
                   <li>
                     <Link
                       href='/blogs/transformers'
-                      className='text-amber-800 hover:text-amber-950 dark:text-amber-600 dark:hover:text-amber-400'
+                      className='!text-amber-700 hover:!text-amber-800 dark:!text-amber-700 dark:hover:!text-amber-800 font-source-serif-4 !underline !decoration-solid !underline-offset-4 transition-colors'
                     >
                       mathematical intuition for transformers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/static/content/neural-nets-assets/neural_nets.pdf'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='!text-amber-700 hover:!text-amber-800 dark:!text-amber-700 dark:hover:!text-amber-800 font-source-serif-4 !underline !decoration-solid !underline-offset-4 transition-colors'
+                    >
+                      notes on neural nets
                     </Link>
                   </li>
                 </ul>
