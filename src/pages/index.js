@@ -54,7 +54,6 @@ export default function Home() {
       </Head>
       <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll">
         <div className="mx-auto w-full max-w-3xl px-4 pb-32 md:px-8 md:pt-2">
-          {/* Avatar */}
           <div className="mb-6 flex justify-center md:ml-20">
             <Image
               src="/static/img/avatar.png"
@@ -66,18 +65,17 @@ export default function Home() {
           </div>
 
           <div className="space-y-12 pb-24 md:space-y-16 md:pb-4">
-            {/* Bio */}
             <SectionContainer>
               <SectionTitle />
               <SectionContent>
-                <div className="text-secondary -mb-6 leading-7">
-                  <p className="mb-5">
+                <div className="text-secondary -mb-6 leading-relaxed">
+                  <p className="mb-3">
                     Hey, I'm Ishan! I'm a founding engineer at{" "}
                     <Link
                       href="https://happenstance.ai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center font-medium text-indigo-500"
+                      className="group inline-flex items-center font-medium text-indigo-500 hover:text-indigo-700"
                     >
                       Happenstance
                     </Link>{" "}
@@ -85,11 +83,21 @@ export default function Home() {
                     graduated from UT Austin with degrees in Electrical and
                     Computer Engineering and Mathematics.
                   </p>
+                  <p className="mb-5">
+                    I'm based in San Francisco and love meeting people from the
+                    Internet. You should absolutely{" "}
+                    <Link
+                      href="mailto:ishan0102@gmail.com"
+                      className="group inline-flex items-center font-medium text-indigo-500 hover:text-indigo-700"
+                    >
+                      reach out
+                    </Link>{" "}
+                    if you want to chat!
+                  </p>
                 </div>
               </SectionContent>
             </SectionContainer>
 
-            {/* Work */}
             <SectionContainer>
               <SectionTitle>Work</SectionTitle>
               <SectionContent>
@@ -133,7 +141,6 @@ export default function Home() {
               </SectionContent>
             </SectionContainer>
 
-            {/* Acquisition Note */}
             <SectionContainer>
               <SectionTitle />
               <SectionContent>
@@ -146,11 +153,16 @@ export default function Home() {
               </SectionContent>
             </SectionContainer>
 
-            {/* Socials */}
             <SectionContainer>
               <SectionTitle>Online</SectionTitle>
               <SectionContent>
                 <div className="flex flex-col space-y-3">
+                  <TableRow
+                    href={"https://happenstance.ai/u/ishan"}
+                    title={"Happenstance"}
+                    subtitle={"View"}
+                    date={""}
+                  />
                   <TableRow
                     href={"mailto:ishan0102@gmail.com"}
                     title={"Email"}
@@ -159,12 +171,12 @@ export default function Home() {
                   />
                   <TableRow
                     href={"https://github.com/ishan0102"}
-                    title={"GitHub"}
+                    title={"Github"}
                     subtitle={"Follow"}
                     date={""}
                   />
                   <TableRow
-                    href={"https://twitter.com/ishan0102"}
+                    href={"https://twitter.com/var_epsilon"}
                     title={"Twitter"}
                     subtitle={"Follow"}
                     date={""}
@@ -173,13 +185,12 @@ export default function Home() {
               </SectionContent>
             </SectionContainer>
 
-            {/* Spotify Widget */}
             <SectionContainer>
               <SectionTitle>Music</SectionTitle>
               <SectionContent>
                 <iframe
                   className="rounded-xl"
-                  src="https://open.spotify.com/embed/playlist/12DxIGMOK6o2ZQ5PdT8Hzv?utm_source=generator"
+                  src="https://open.spotify.com/embed/playlist/3tXb1EbBHALZtCsqVBKCdo?utm_source=generator"
                   width="100%"
                   height="380"
                   allowFullScreen=""
@@ -188,7 +199,6 @@ export default function Home() {
               </SectionContent>
             </SectionContainer>
 
-            {/* :) */}
             <pre className="ml-12 hidden leading-5 md:block">
               {`
                    ,----------------,              ,---------,

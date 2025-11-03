@@ -1,12 +1,11 @@
 import { Analytics } from "@vercel/analytics/react";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
-import Script from "next/script";
 import * as React from "react";
 
 const defaultSEO = {
   title: "Ishan Shah",
-  description: "Software engineer living in NYC.",
+  description: "Software engineer in SF.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -20,8 +19,8 @@ const defaultSEO = {
     ],
   },
   twitter: {
-    handle: "@ishan0102",
-    site: "@ishan0102",
+    handle: "@var_epsilon",
+    site: "@var_epsilon",
     cardType: "summary_large_image",
   },
 };

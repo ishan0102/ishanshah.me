@@ -14,10 +14,10 @@ export function Nav() {
       <div className="flex w-auto items-center">
         <div className="text-sm font-normal md:flex-grow md:text-base md:font-medium">
           <Link
-            href="/portfolio"
+            href="/projects"
             className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
           >
-            Portfolio
+            Projects
           </Link>
           <Link
             href="https://ishan.cafe"
