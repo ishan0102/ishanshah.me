@@ -123,11 +123,6 @@ export default function Home() {
                     subtitle="AI agents for web browsing"
                   />
                   <TableRow
-                    href="https://unrealspeech.com/"
-                    title="Unreal Speech"
-                    subtitle="Text-to-speech model evaluation"
-                  />
-                  <TableRow
                     href="https://www.youtube.com/jobs/trust-and-safety/"
                     title="YouTube"
                     subtitle="Video classification and reliability"
