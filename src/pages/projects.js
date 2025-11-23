@@ -25,7 +25,7 @@ export default function Projects() {
         <meta property="og:title" content="Projects • Ishan Shah" key="title" />
       </Head>
       <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll scroll-smooth px-8">
-        <div className="mx-auto mb-52 mt-4 w-full max-w-2xl sm:mt-8 md:mb-32">
+        <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
           <div className="text-secondary mb-2 sm:mb-6">
             My favorite hobby is doing side projects, ranging from writing my
             own textbook to making my own productivity tools to browsing the web

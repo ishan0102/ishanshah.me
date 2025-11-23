@@ -20,9 +20,7 @@ export function Nav() {
             Projects
           </Link>
           <Link
-            href="https://ishan.cafe"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/writing"
             className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
           >
             Writing
