@@ -11,7 +11,7 @@ function Writing({ name, date, tagline, slug }) {
       <strong className="text-primary flex-none font-medium group-hover:text-indigo-600">
         {name}
       </strong>
-      <p className="ml-auto mr-8 hidden sm:inline">{tagline}</p>
+      <p className="mr-8 ml-auto hidden sm:inline">{tagline}</p>
       <p>{date}</p>
     </Link>
   );
@@ -25,9 +25,10 @@ export default function WritingPage() {
         <meta property="og:title" content="Writing • Ishan Shah" key="title" />
       </Head>
       <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll scroll-smooth px-8">
-        <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
+        <div className="mx-auto mt-4 mb-52 w-full max-w-3xl sm:mt-8 md:mb-32">
           <div className="text-secondary mb-2 sm:mb-6">
-            Thoughts, essays, and articles on technology, AI, and more.
+            Thoughts on tech. Everything here is written by me without AI
+            assistance!
           </div>
           {WritingData.writingList.length > 0 ? (
             WritingData.writingList.map((writing, index) => {
@@ -42,9 +43,7 @@ export default function WritingPage() {
               );
             })
           ) : (
-            <p className="text-secondary text-sm italic">
-              Writing coming soon...
-            </p>
+            <p className="text-secondary text-sm italic">Coming soon...</p>
           )}
         </div>
       </div>
