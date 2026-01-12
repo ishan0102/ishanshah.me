@@ -5,26 +5,23 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import { WritingData } from "@/data/writing";
-import { BackButton } from "./back-button";
+import { BackButton } from "@/app/writing/[slug]/back-button";
 
 const components = {
   h1: (props: React.ComponentPropsWithoutRef<"h1">) => (
     <h1 className="text-primary mb-4 text-3xl font-bold" {...props} />
   ),
   h2: (props: React.ComponentPropsWithoutRef<"h2">) => (
-    <h2 className="text-primary mb-3 mt-8 text-2xl font-semibold" {...props} />
+    <h2 className="text-primary mt-8 mb-3 text-2xl font-semibold" {...props} />
   ),
   h3: (props: React.ComponentPropsWithoutRef<"h3">) => (
-    <h3 className="text-primary mb-2 mt-6 text-xl font-semibold" {...props} />
+    <h3 className="text-primary mt-6 mb-2 text-xl font-semibold" {...props} />
   ),
   p: (props: React.ComponentPropsWithoutRef<"p">) => (
     <p className="text-secondary mb-4 leading-relaxed" {...props} />
   ),
   a: (props: React.ComponentPropsWithoutRef<"a">) => (
-    <a
-      className="text-indigo-500 underline hover:text-indigo-700"
-      {...props}
-    />
+    <a className="text-indigo-500 underline hover:text-indigo-700" {...props} />
   ),
   ul: (props: React.ComponentPropsWithoutRef<"ul">) => (
     <ul className="text-secondary mb-4 ml-6 list-disc" {...props} />
@@ -72,12 +69,14 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
     "src/content/writing",
-    `${slug}.mdx`
+    `${slug}.mdx`,
   );
 
   if (!fs.existsSync(filePath)) {
@@ -100,7 +99,7 @@ export default async function WritingPost({ params }: PageProps) {
   const filePath = path.join(
     process.cwd(),
     "src/content/writing",
-    `${slug}.mdx`
+    `${slug}.mdx`,
   );
 
   if (!fs.existsSync(filePath)) {
@@ -113,7 +112,7 @@ export default async function WritingPost({ params }: PageProps) {
 
   return (
     <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll scroll-smooth px-8">
-      <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
+      <div className="mx-auto mt-4 mb-52 w-full max-w-3xl sm:mt-8 md:mb-32">
         <div className="mb-8">
           <BackButton />
           <h1 className="text-primary mb-2 text-4xl font-bold">
