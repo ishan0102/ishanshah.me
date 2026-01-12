@@ -1,15 +1,15 @@
 const projectsList = [
   {
-    name: "rsrch.space",
-    date: "2023",
-    tagline: "Stream of my favorite papers and links",
-    link: "https://www.rsrch.space/",
-  },
-  {
     name: "vimGPT",
-    date: "2023",
+    date: "2024",
     tagline: "Browse the web with GPT-4V and Vimium",
     link: "https://github.com/ishan0102/vimGPT",
+  },
+  {
+    name: "rsrch.space",
+    date: "2024",
+    tagline: "Stream of my favorite papers and links",
+    link: "https://www.rsrch.space/",
   },
   {
     name: "ishan.cafe",

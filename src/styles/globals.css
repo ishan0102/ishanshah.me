@@ -1,10 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../**/*.js";
+
+@theme {
+  --color-off-white: #f5f2e9;
+}
 
 @layer base {
   html {
-    @apply max-h-screen overflow-hidden text-base antialiased;
+    max-height: 100vh;
+    overflow: hidden;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* handles safari overscroll background color */
@@ -16,7 +24,7 @@
     bottom: -50%;
     left: -50%;
     z-index: -1;
-    @apply bg-off-white;
+    background-color: var(--color-off-white);
   }
 
   /* Inflection Font */
@@ -45,43 +53,39 @@
 }
 
 /* Your own custom utilities */
-@layer utilities {
-  .text-primary {
-    @apply text-gray-900;
-  }
+@utility text-primary {
+  color: var(--color-gray-900);
+}
 
-  .text-secondary {
-    @apply text-gray-700;
-  }
+@utility text-secondary {
+  color: var(--color-gray-700);
+}
 
-  .text-tertiary {
-    @apply text-gray-500;
-  }
+@utility text-tertiary {
+  color: var(--color-gray-500);
+}
 
-  .text-quaternary {
-    @apply text-gray-400;
-  }
+@utility text-quaternary {
+  color: var(--color-gray-400);
+}
 
-  .text-quinary {
-    @apply text-gray-300;
-  }
+@utility text-quinary {
+  color: var(--color-gray-300);
+}
 
-  .font-grenette {
-    font-family: 'grenette_regular', 'dazzed_medium', sans-serif;
-  }
+@utility font-grenette {
+  font-family: 'grenette_regular', 'dazzed_medium', sans-serif;
+}
 
-  .font-apple2mono {
-    font-family: 'apple2mono', monospace;
-  }
+@utility font-apple2mono {
+  font-family: 'apple2mono', monospace;
+}
 
-  /* For Webkit-based browsers (Chrome, Safari and Opera) */
-  .scrollbar-hide::-webkit-scrollbar {
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
     display: none;
   }
-
-  /* For IE, Edge and Firefox */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
