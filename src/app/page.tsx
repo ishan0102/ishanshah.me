@@ -62,7 +62,7 @@ function SectionContainer(props: React.HTMLAttributes<HTMLDivElement>) {
 
 export default function Home() {
   return (
-    <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll">
+    <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll">
       <div className="mx-auto w-full max-w-3xl px-4 pb-32 md:px-8 md:pt-2">
         <div className="mb-6 flex justify-center md:ml-20">
           <Image

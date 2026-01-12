@@ -112,7 +112,7 @@ export default async function WritingPost({ params }: PageProps) {
   const writingEntry = WritingData.writingList.find((w) => w.slug === slug);
 
   return (
-    <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll scroll-smooth px-8">
+    <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll scroll-smooth px-8">
       <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
         <div className="mb-8">
           <BackButton />
