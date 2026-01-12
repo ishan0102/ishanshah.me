@@ -18,7 +18,7 @@ function ProjectItem({ name, date, tagline, link }: Project) {
       <strong className="text-primary flex-none font-medium group-hover:text-indigo-600">
         {name}
       </strong>
-      <p className="ml-auto mr-8 hidden sm:inline">{tagline}</p>
+      <p className="text-tertiary mr-8 ml-auto hidden sm:inline">{tagline}</p>
       <p>{date}</p>
     </Link>
   );
@@ -27,7 +27,7 @@ function ProjectItem({ name, date, tagline, link }: Project) {
 export default function ProjectsPage() {
   return (
     <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll scroll-smooth px-8">
-      <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
+      <div className="mx-auto mt-4 mb-52 w-full max-w-5xl sm:mt-8 md:mb-32">
         <div className="text-secondary mb-2 sm:mb-6">
           My favorite hobby is doing side projects, ranging from writing my own
           textbook to making my own productivity tools to browsing the web

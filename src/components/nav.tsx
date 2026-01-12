@@ -31,10 +31,8 @@ export function Nav() {
             Writing
           </Link>
           <Link
-            href="https://rsrch.space"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary mr-3 inline-block hover:text-indigo-500 md:mr-8"
+            href="/reading"
+            className={`mr-3 inline-block md:mr-8 ${pathname?.startsWith("/reading") ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
           >
             Reading
           </Link>

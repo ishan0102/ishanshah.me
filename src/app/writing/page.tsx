@@ -27,7 +27,7 @@ function WritingItem({ name, date, tagline, slug }: WritingEntry) {
 export default function WritingPage() {
   return (
     <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll scroll-smooth px-8">
-      <div className="mx-auto mt-4 mb-52 w-full max-w-3xl sm:mt-8 md:mb-32">
+      <div className="mx-auto mt-4 mb-52 w-full max-w-5xl sm:mt-8 md:mb-32">
         <div className="text-secondary mb-2 sm:mb-6">
           Thoughts on tech. Everything here is written by me without AI
           assistance!
