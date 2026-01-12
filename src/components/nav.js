@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 export function Nav() {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav className="flex items-center justify-between border-b border-gray-200 p-4 md:p-6">
@@ -18,13 +20,13 @@ export function Nav() {
         <div className="text-sm font-normal md:grow md:text-base md:font-medium">
           <Link
             href="/projects"
-            className={`mr-3 inline-block md:mr-8 ${router.pathname === "/projects" ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
+            className={`mr-3 inline-block md:mr-8 ${pathname === "/projects" ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
           >
             Projects
           </Link>
           <Link
             href="/writing"
-            className={`mr-3 inline-block md:mr-8 ${router.pathname.startsWith("/writing") ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
+            className={`mr-3 inline-block md:mr-8 ${pathname?.startsWith("/writing") ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
           >
             Writing
           </Link>
