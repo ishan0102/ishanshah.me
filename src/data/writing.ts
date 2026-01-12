@@ -1,4 +1,11 @@
-const writingList = [
+export interface WritingEntry {
+  name: string;
+  date: string;
+  tagline: string;
+  slug: string;
+}
+
+const writingList: WritingEntry[] = [
   // Add writing entries here with the following structure:
   // {
   //   name: "Article Title",

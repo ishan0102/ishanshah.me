@@ -1,14 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ProjectData } from "../../data/projects";
+import { ProjectData, type Project } from "@/data/projects";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Projects",
   openGraph: {
     title: "Projects | Ishan Shah",
   },
 };
 
-function Project({ name, date, tagline, link }) {
+function ProjectItem({ name, date, tagline, link }: Project) {
   return (
     <Link
       href={link}
@@ -28,13 +29,13 @@ export default function ProjectsPage() {
     <div className="scrollbar-hide relative flex max-h-screen w-full flex-col overflow-y-scroll scroll-smooth px-8">
       <div className="mx-auto mb-52 mt-4 w-full max-w-3xl sm:mt-8 md:mb-32">
         <div className="text-secondary mb-2 sm:mb-6">
-          My favorite hobby is doing side projects, ranging from writing my
-          own textbook to making my own productivity tools to browsing the web
+          My favorite hobby is doing side projects, ranging from writing my own
+          textbook to making my own productivity tools to browsing the web
           autonomously. These projects have been visited over 250,000 times.
         </div>
         {ProjectData.projectsList.map((project, index) => {
           return (
-            <Project
+            <ProjectItem
               key={index}
               name={project.name}
               date={project.date}

@@ -1,4 +1,11 @@
-const projectsList = [
+export interface Project {
+  name: string;
+  date: string;
+  tagline: string;
+  link: string;
+}
+
+const projectsList: Project[] = [
   {
     name: "vimGPT",
     date: "2024",

@@ -1,14 +1,16 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ishan Shah",
   openGraph: {
     title: "Ishan Shah",
   },
 };
 
-function SectionTitle(props) {
+function SectionTitle(props: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h4
       className="text-primary col-span-2 text-lg font-semibold md:text-right md:text-base md:font-normal md:text-opacity-40"
@@ -17,11 +19,18 @@ function SectionTitle(props) {
   );
 }
 
-function SectionContent(props) {
+function SectionContent(props: React.HTMLAttributes<HTMLDivElement>) {
   return <div className="col-span-10" {...props} />;
 }
 
-function TableRow({ href, title, subtitle, date }) {
+interface TableRowProps {
+  href: string;
+  title: ReactNode;
+  subtitle?: string;
+  date?: string;
+}
+
+function TableRow({ href, title, subtitle, date }: TableRowProps) {
   return (
     <a href={href} className="group flex items-center space-x-4">
       <strong className="text-primary flex-none font-medium group-hover:text-indigo-600">
@@ -42,7 +51,7 @@ function TableRow({ href, title, subtitle, date }) {
   );
 }
 
-function SectionContainer(props) {
+function SectionContainer(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className="grid grid-cols-1 items-start gap-3 md:grid-cols-12 md:gap-6"
@@ -189,7 +198,7 @@ export default function Home() {
                 src="https://open.spotify.com/embed/playlist/3tXb1EbBHALZtCsqVBKCdo?utm_source=generator"
                 width="100%"
                 height="380"
-                allowFullScreen=""
+                allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               ></iframe>
             </SectionContent>

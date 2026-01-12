@@ -1,56 +1,63 @@
+import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
-import { WritingData } from "../../../data/writing";
+import { WritingData } from "@/data/writing";
 import { BackButton } from "./back-button";
 
 const components = {
-  h1: (props) => (
+  h1: (props: React.ComponentPropsWithoutRef<"h1">) => (
     <h1 className="text-primary mb-4 text-3xl font-bold" {...props} />
   ),
-  h2: (props) => (
+  h2: (props: React.ComponentPropsWithoutRef<"h2">) => (
     <h2 className="text-primary mb-3 mt-8 text-2xl font-semibold" {...props} />
   ),
-  h3: (props) => (
+  h3: (props: React.ComponentPropsWithoutRef<"h3">) => (
     <h3 className="text-primary mb-2 mt-6 text-xl font-semibold" {...props} />
   ),
-  p: (props) => (
+  p: (props: React.ComponentPropsWithoutRef<"p">) => (
     <p className="text-secondary mb-4 leading-relaxed" {...props} />
   ),
-  a: (props) => (
+  a: (props: React.ComponentPropsWithoutRef<"a">) => (
     <a
       className="text-indigo-500 underline hover:text-indigo-700"
       {...props}
     />
   ),
-  ul: (props) => (
+  ul: (props: React.ComponentPropsWithoutRef<"ul">) => (
     <ul className="text-secondary mb-4 ml-6 list-disc" {...props} />
   ),
-  ol: (props) => (
+  ol: (props: React.ComponentPropsWithoutRef<"ol">) => (
     <ol className="text-secondary mb-4 ml-6 list-decimal" {...props} />
   ),
-  li: (props) => <li className="mb-2" {...props} />,
-  blockquote: (props) => (
+  li: (props: React.ComponentPropsWithoutRef<"li">) => (
+    <li className="mb-2" {...props} />
+  ),
+  blockquote: (props: React.ComponentPropsWithoutRef<"blockquote">) => (
     <blockquote
       className="text-secondary border-l-4 border-gray-300 pl-4 italic"
       {...props}
     />
   ),
-  code: (props) => (
+  code: (props: React.ComponentPropsWithoutRef<"code">) => (
     <code
       className="text-primary rounded bg-gray-100 px-1 py-0.5 text-sm"
       {...props}
     />
   ),
-  pre: (props) => (
+  pre: (props: React.ComponentPropsWithoutRef<"pre">) => (
     <pre
       className="text-primary mb-4 overflow-x-auto rounded bg-gray-100 p-4"
       {...props}
     />
   ),
 };
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
 export async function generateStaticParams() {
   const writingDirectory = path.join(process.cwd(), "src/content/writing");
@@ -65,7 +72,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
@@ -88,7 +95,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function WritingPost({ params }) {
+export default async function WritingPost({ params }: PageProps) {
   const { slug } = await params;
   const filePath = path.join(
     process.cwd(),

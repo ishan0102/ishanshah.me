@@ -1,14 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { WritingData } from "../../data/writing";
+import { WritingData, type WritingEntry } from "@/data/writing";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Writing",
   openGraph: {
     title: "Writing | Ishan Shah",
   },
 };
 
-function Writing({ name, date, tagline, slug }) {
+function WritingItem({ name, date, tagline, slug }: WritingEntry) {
   return (
     <Link
       href={`/writing/${slug}`}
@@ -34,7 +35,7 @@ export default function WritingPage() {
         {WritingData.writingList.length > 0 ? (
           WritingData.writingList.map((writing, index) => {
             return (
-              <Writing
+              <WritingItem
                 key={index}
                 name={writing.name}
                 date={writing.date}

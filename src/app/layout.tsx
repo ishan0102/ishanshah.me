@@ -1,8 +1,10 @@
-import "../styles/globals.css";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Nav } from "../components/nav";
+import { Nav } from "@/components/nav";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Ishan Shah",
     template: "%s | Ishan Shah",
@@ -37,7 +39,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
