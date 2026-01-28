@@ -7,6 +7,18 @@ export interface Project {
 
 const projectsList: Project[] = [
   {
+    name: "Family Recipes",
+    date: "2026",
+    tagline: "Translated my grandmother's handwritten Gujarati recipes",
+    link: "/recipes",
+  },
+  {
+    name: "Wisesplit",
+    date: "2025",
+    tagline: "Parse receipts and split them with AI",
+    link: "https://wisesplit.app",
+  },
+  {
     name: "vimGPT",
     date: "2024",
     tagline: "Browse the web with GPT-4V and Vimium",
