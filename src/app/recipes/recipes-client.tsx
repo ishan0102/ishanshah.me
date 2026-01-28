@@ -133,7 +133,7 @@ function RecipeItem({ recipe }: { recipe: Recipe }) {
             {recipe.tags.cuisine.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs capitalize text-indigo-700"
+                className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700 capitalize"
               >
                 {tag}
               </span>
@@ -141,7 +141,7 @@ function RecipeItem({ recipe }: { recipe: Recipe }) {
             {recipe.tags.diet.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-green-50 px-2 py-0.5 text-xs capitalize text-green-700"
+                className="rounded-full bg-green-50 px-2 py-0.5 text-xs text-green-700 capitalize"
               >
                 {tag}
               </span>
@@ -149,7 +149,7 @@ function RecipeItem({ recipe }: { recipe: Recipe }) {
             {recipe.tags.cooking_method.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-amber-50 px-2 py-0.5 text-xs capitalize text-amber-700"
+                className="rounded-full bg-amber-50 px-2 py-0.5 text-xs text-amber-700 capitalize"
               >
                 {tag}
               </span>
@@ -208,7 +208,7 @@ export default function RecipesClient() {
         recipe.name.toLowerCase().includes(search.toLowerCase()) ||
         recipe.description.toLowerCase().includes(search.toLowerCase()) ||
         recipe.ingredients.some((i) =>
-          i.item.toLowerCase().includes(search.toLowerCase())
+          i.item.toLowerCase().includes(search.toLowerCase()),
         );
 
       const matchesCategory =
@@ -222,25 +222,25 @@ export default function RecipesClient() {
     <div className="scrollbar-hide relative flex h-full w-full flex-col overflow-y-scroll scroll-smooth px-8">
       <div className="mx-auto mt-4 mb-52 w-full max-w-5xl sm:mt-8 md:mb-32">
         <div className="text-secondary mb-4 sm:mb-6">
-          Family recipes passed down through generations. Search by name or
-          ingredient.
+          Family recipes passed down from my grandmother to my mom to me. Search
+          by name or ingredient.
         </div>
 
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <input
               type="text"
               placeholder="Search recipes or ingredients..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 bg-white py-2 pl-10 pr-4 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              className="w-full rounded-lg border border-gray-200 bg-white py-2 pr-4 pl-10 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
             />
           </div>
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm capitalize focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm capitalize focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
           >
             {categories.map((cat) => (
               <option key={cat} value={cat}>

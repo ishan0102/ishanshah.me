@@ -17,7 +17,7 @@ export function Nav() {
         </Link>
       </div>
       <div className="flex w-auto items-center">
-        <div className="text-sm font-normal md:grow md:text-base md:font-medium">
+        <div className="text-sm font-medium md:grow md:text-base">
           <Link
             href="/projects"
             className={`mr-3 inline-block md:mr-8 ${pathname === "/projects" ? "text-indigo-500" : "text-primary hover:text-indigo-500"}`}
