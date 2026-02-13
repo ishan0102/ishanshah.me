@@ -9,7 +9,7 @@ const projectsList: Project[] = [
   {
     name: "Family Recipes",
     date: "2026",
-    tagline: "Translated my grandmother's handwritten Gujarati recipes",
+    tagline: "Translated my grandmother's Gujarati recipes",
     link: "/recipes",
   },
   {

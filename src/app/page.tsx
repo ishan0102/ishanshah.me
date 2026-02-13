@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 function SectionTitle(props: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h4
-      className="text-primary col-span-2 text-lg font-semibold md:text-right md:text-base md:font-normal md:text-opacity-40"
+      className="text-primary md:text-opacity-40 col-span-2 text-lg font-semibold md:text-right md:text-base md:font-normal"
       {...props}
     />
   );
@@ -89,9 +89,9 @@ export default function Home() {
                   >
                     Happenstance
                   </Link>{" "}
-                  and enjoy building things with LLMs in my free time. I
-                  graduated from UT Austin with degrees in Electrical and
-                  Computer Engineering and Mathematics.
+                  (employee #2) and enjoy building things with LLMs in my free
+                  time. I graduated from UT Austin with degrees in Electrical
+                  and Computer Engineering and Mathematics.
                 </p>
                 <p className="mb-5">
                   I'm based in San Francisco and love meeting people from the
