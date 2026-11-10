@@ -31,10 +31,10 @@ const projectsList: Project[] = [
     link: "https://www.rsrch.space/",
   },
   {
-    name: "ishan.cafe",
+    name: "ishan.coffee",
     date: "2023",
     tagline: "Zettelkasten for my brain using Quartz",
-    link: "https://www.ishan.cafe/",
+    link: "https://ishan.coffee/",
   },
   {
     name: "engblogs",
